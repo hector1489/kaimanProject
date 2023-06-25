@@ -8,7 +8,7 @@ const Presentation = () => {
                 <p>"La comprensión es una forma de éxtasis."</p>
             </div>
             <div className="image-container flex-grow-1 d-flex justify-content-end">
-                <img className="rounded-image" src="/img/foto2.jpg" alt="foto2" />
+                <img className="rounded-image" src="src/assets/img/foto2.jpg" alt="foto2" />
             </div>
         </div>
     );

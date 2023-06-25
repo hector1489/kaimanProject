@@ -10,19 +10,19 @@
         {
             "id": 2,
             "name": "Carrito de compras",
-            "image": "src/assets/img/Carrito2.png",
+            "image": "./assets/img/Carrito2.png",
             "description": "Carrito de compras en Vite+React. Proyecto personal."
         },
         {
             "id": 3,
             "name": "inmobiliaria",
-            "image": "src/assets/img/cuppon.png",
+            "image": "/src/assets/img/cuppon.png",
             "description": "Documento Html con implementacion de Css y bootstrap."
         },
         {
             "id": 4,
             "name": "Iguana page",
-            "image": "src/assets/img/iguana.png",
+            "image": "./src/assets/img/iguana.png",
             "description": "Blog de prueba con display en flex y float."
         }
     ]
