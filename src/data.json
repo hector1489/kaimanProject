@@ -4,13 +4,13 @@
         {
             "id": 1,
             "name": "JavaScript",
-            "image": "../img/inmobiliaria.png",
+            "image": "img/inmobiliaria.png",
             "description": "Landing page de prueba para conocimientos en las propiedades display y js. Se añaden alert y estructura al proyecto."
         },
         {
             "id": 2,
             "name": "Carrito de compras",
-            "image": "../assets/img/Carrito2.png",
+            "image": "./img/Carrito2.png",
             "description": "Carrito de compras en Vite+React. Proyecto personal."
         },
         {
