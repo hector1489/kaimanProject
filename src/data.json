@@ -4,25 +4,25 @@
         {
             "id": 1,
             "name": "JavaScript",
-            "image": "src/assets/img/inmobiliaria.png",
+            "image": "assets/img/inmobiliaria.png",
             "description": "Landing page de prueba para conocimientos en las propiedades display y js. Se añaden alert y estructura al proyecto."
         },
         {
             "id": 2,
             "name": "Carrito de compras",
-            "image": "./assets/img/Carrito2.png",
+            "image": "assets/img/Carrito2.png",
             "description": "Carrito de compras en Vite+React. Proyecto personal."
         },
         {
             "id": 3,
             "name": "inmobiliaria",
-            "image": "/src/assets/img/cuppon.png",
+            "image": "assets/img/cuppon.png",
             "description": "Documento Html con implementacion de Css y bootstrap."
         },
         {
             "id": 4,
             "name": "Iguana page",
-            "image": "./src/assets/img/iguana.png",
+            "image": "assets/img/iguana.png",
             "description": "Blog de prueba con display en flex y float."
         }
     ]
