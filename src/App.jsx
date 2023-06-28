@@ -23,6 +23,7 @@ function App() {
               name={project.name}
               description={project.description}
               image={project.image}
+              url={project.url}
             />
           ))}
         </div>

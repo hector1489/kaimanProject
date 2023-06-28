@@ -1,6 +1,6 @@
 
 
-const Projects = ({ name, image, description }) => {
+const Projects = ({ name, image, description, url}) => {
   return (
     <div className="card">
       <img className="card-img-top" src={image} alt={name} />
@@ -9,7 +9,7 @@ const Projects = ({ name, image, description }) => {
         <p className="card-text">{description}</p>
       </div>
       <div className="card-footer">
-        <button className="btn btn-dark">Ver en Github</button>
+       <a href={url} className="btn btn-dark" target="_blank">Ver en Github</a>
       </div>
     </div>
   )
