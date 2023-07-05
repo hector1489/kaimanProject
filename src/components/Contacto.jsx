@@ -8,7 +8,6 @@ const Contacto = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Envía los datos del formulario al backend
     fetch('/enviar-correo', {
       method: 'POST',
       headers: {
@@ -19,11 +18,9 @@ const Contacto = () => {
       .then(response => response.text())
       .then(data => {
         console.log(data);
-        // Haz algo con la respuesta del backend, como mostrar un mensaje de éxito
       })
       .catch(error => {
         console.error('Error:', error);
-        // Haz algo con el error, como mostrar un mensaje de error
       });
   };
 

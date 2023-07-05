@@ -34,7 +34,7 @@
             "name": "Star-Wars.Dex",
             "image": "img/starwarsapi.png",
             "description": "App. para el consumo de Swapi (Api de Star Wars). Aqui encuentra Cards con la informacion de la Api mas imagenes adheridas desde un folder img.",
-            "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
+            "url": "https://github.com/hector1489/starWarsApi"
         }
     ]
 }
