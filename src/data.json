@@ -4,35 +4,35 @@
         {
             "id": 1,
             "name": "JavaScript",
-            "image": "img/inmobiliaria.png",
+            "image": "/img/inmobiliaria.png",
             "description": "Landing page de prueba para conocimientos en las propiedades display y js. Se añaden alert y estructura al proyecto.",
             "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
         },
         {
             "id": 2,
             "name": "Carrito de compras",
-            "image": "img/Carrito2.png",
+            "image": "/img/Carrito2.png",
             "description": "Carrito de compras en Vite+React. Proyecto personal.",
             "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
         },
         {
             "id": 3,
             "name": "inmobiliaria",
-            "image": "img/cuppon.png",
+            "image": "/img/cuppon.png",
             "description": "Documento Html con implementacion de Css y bootstrap.",
             "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
         },
         {
             "id": 4,
             "name": "Iguana page",
-            "image": "img/iguana.png",
+            "image": "/img/iguana.png",
             "description": "Blog de prueba con display en flex y float.",
             "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
         },
         {
             "id": 5,
             "name": "Star-Wars.Dex",
-            "image": "img/starwarsapi.png",
+            "image": "/img/starwarsapi.png",
             "description": "App. para el consumo de Swapi (Api de Star Wars). Aqui encuentra Cards con la informacion de la Api mas imagenes adheridas desde un folder img.",
             "url": "https://github.com/hector1489/starWarsApi"
         }
