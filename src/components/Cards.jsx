@@ -8,7 +8,7 @@ const Cards = () => {
   return (
     <>
       {data.map((item) => (
-        <Card style={{ width: '18rem' }} key={item.id} className="p-2">
+        <Card style={{ width: '25rem' }} key={item.id} className="p-2">
           <Card.Img variant="top" src={item.image} />
           <Card.Body className="d-flex flex-column align-items-center">
             <Card.Title>{item.name}</Card.Title>

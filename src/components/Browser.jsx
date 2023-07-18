@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Browser = () => {
   const setActiveClass = ({ isActive }) => {
-    return isActive ? "text-white text-decoration-none me-3" : "text-secondary text-decoration-none me-3";
+    return isActive ? "text-warning text-decoration-none me-3" : "text-secondary text-decoration-none me-3";
   };
 
   return (

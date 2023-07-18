@@ -5,7 +5,11 @@ const Contacto = () => {
     <Form className="container-form">
       <Form.Group className="mb-3 form-group bg-dark">
         <Form.Label className="container-fluid my-5 fw-bold text-white text-decoration-none text-uppercase">Contacto :</Form.Label>
-        <div className="container">
+        <ul className="text-white text-decoration-none">
+          <li><span className="fw-bold me-3">Mail:</span> g.p.hector.alejandro@gmail.com</li>
+          <li><span className="fw-bold me-2">Fono:</span> +569-50882834</li>
+        </ul>
+        <div className="container-icon">
           <div className="col-12">
             <div className="fa-3x text-center color-dark">
               <a className="social-icon pe-2" href="https://github.com/hector1489" target="_blank" rel="noopener noreferrer">
