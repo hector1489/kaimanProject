@@ -8,12 +8,17 @@ const Cards = () => {
   return (
     <>
       {data.map((item) => (
-        <Card style={{ width: '25rem' }} key={item.id} className="p-2">
-          <Card.Img variant="top" src={item.image} />
-          <Card.Body className="d-flex flex-column align-items-center">
+        <Card
+        key={item.id}
+        className="p-2"
+         style={{ backgroundImage: `url(${item.image})` }}
+        >
+          <Card.Body>
+          <div className="container-card">
             <Card.Title>{item.name}</Card.Title>
             <Card.Text>{item.description}</Card.Text>
             <Button variant="dark">GitHub</Button>
+            </div>
           </Card.Body>
         </Card>
       ))}
