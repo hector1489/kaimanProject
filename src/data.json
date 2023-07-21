@@ -20,14 +20,14 @@
         "name": "Iguana page",
         "image": "/img/iguana.png",
         "description": "Blog de prueba con display en flex y float.",
-        "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
+        "url": "https://github.com/hector1489/iguanapage"
       },
       {
         "id": 4,
-        "name": "inmobiliaria",
+        "name": "Cuppon",
         "image": "/img/cuppon.png",
         "description": "Documento Html con implementación de Css y bootstrap.",
-        "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
+        "url": "https://github.com/hector1489/cuppon"
       },
       {
         "id": 5,
@@ -38,10 +38,10 @@
       },
       {
         "id": 6,
-        "name": "JavaScript",
+        "name": "Inmobiliaria",
         "image": "/img/inmobiliaria.png",
         "description": "Landing page de prueba para conocimientos en las propiedades display y js. Se añaden alert y estructura al proyecto.",
-        "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
+        "url": "https://github.com/hector1489/inmobiliariajs"
       }
     ]
   }
