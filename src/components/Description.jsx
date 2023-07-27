@@ -2,8 +2,8 @@
 const Description = () => {
   return (
     <section id="About-me" className="container-description">
-      <div className="container-p">
-        <p className="my-4 fw-bold" >
+      <div>
+        <p className="container-p my-4 fw-bold text-white" >
           Orientado al cliente y a la excelencia, cuento con una trayectoria de 14 años enfocada al sector de salud.
           Actualmente, me estoy desarrollando como front-end y soy estudiante de Full Stack JavaScript en Desafios Latam.
           Mis conocimientos incluyen las siguientes tecnologías: SAP, Waypoint, HTML, CSS, Bootstrap, Git, GitHub, Cloud Computing, Sass, JS, y React.

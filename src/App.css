@@ -36,7 +36,9 @@ body {
     color: white;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     margin: 50px;
+    backdrop-filter: blur(10px);
 }
+
 
 .intro-text>div {
     margin: 5px;
@@ -76,9 +78,8 @@ body {
 }
 
 .container-p {
-    width: 600px;
+    padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
-    color: white;
     backdrop-filter: blur(20px);
 }
 .section-container {
