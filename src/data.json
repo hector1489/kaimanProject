@@ -17,27 +17,41 @@
       },
       {
         "id": 3,
+        "name": "Ecommerce Pizza",
+        "image": "/img/mammaMia.png",
+        "description": "Comercio electronico en vite + react. Con implementacion de React-bootstrap.",
+        "url": "https://github.com/hector1489/pizzasEcommerce"
+      },
+      {
+        "id": 4,
+        "name": "Registro de Colaboradores",
+        "image": "/img/colaboradores.png",
+        "description": "Planilla base para el registro de colaboradores.",
+        "url": "https://github.com/hector1489/BaseColaboradores"
+      },
+      {
+        "id": 5,
         "name": "Iguana page",
         "image": "/img/iguana.png",
         "description": "Blog de prueba con display en flex y float.",
         "url": "https://github.com/hector1489/iguanapage"
       },
       {
-        "id": 4,
+        "id": 6,
         "name": "Cuppon",
         "image": "/img/cuppon.png",
         "description": "Documento Html con implementación de Css y bootstrap.",
         "url": "https://github.com/hector1489/cuppon"
       },
       {
-        "id": 5,
+        "id": 7,
         "name": "Carrito de compras",
         "image": "/img/Carrito2.png",
         "description": "Carrito de compras en Vite+React. Proyecto personal.",
         "url": "https://github.com/hector1489/carritoViteReact/tree/main/carritoReact"
       },
       {
-        "id": 6,
+        "id": 8,
         "name": "Inmobiliaria",
         "image": "/img/inmobiliaria.png",
         "description": "Landing page de prueba para conocimientos en las propiedades display y js. Se añaden alert y estructura al proyecto.",
