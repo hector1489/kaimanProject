@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Browser from './components/Browser'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import '../src/App.css'
 import ViewsDescription from "./views/ViwesDescription"
@@ -26,7 +26,7 @@ function App() {
   return (
     <DataContext.Provider value={globalState}>
       <BrowserRouter>
-        <Browser />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/viewsdescription" element={<ViewsDescription />} />
