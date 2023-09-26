@@ -1,5 +1,7 @@
 
 const Description = () => {
+  const cvFilePath = 'src/assets/CV/HectorGonzalezCV.pdf'
+
   return (
     <section id="About-me" className="container-description">
       <div>
@@ -8,6 +10,9 @@ const Description = () => {
           Actualmente, me estoy desarrollando como front-end y soy estudiante de Full Stack JavaScript en Desafios Latam.
           Mis conocimientos incluyen las siguientes tecnologías: SAP, Waypoint, HTML, CSS, Bootstrap, Git, GitHub, Cloud Computing, Sass, JS, y React.
         </p>
+        <a href={cvFilePath} download="HectorGonzalezCV.pdf">
+          <button className="btn btn-primary fw-bold">Descargar CV</button>
+        </a>
       </div>
 
       <div className="section-container">
