@@ -1,6 +1,6 @@
 
 const Description = () => {
-  const cvFilePath = 'src/assets/CV/Hector_Gonzalez Pastenes_Resume_26-09-2023-10-49-48.pdf'
+  const cvFilePath = '/src/assets/CV/Hector_Gonzalez Pastenes_Resume_26-09-2023-10-49-48.pdf'
 
   return (
     <section id="About-me" className="container-description">
@@ -10,7 +10,7 @@ const Description = () => {
           Actualmente, me estoy desarrollando como front-end y soy estudiante de Full Stack JavaScript en Desafios Latam.
           Mis conocimientos incluyen las siguientes tecnologías: SAP, Waypoint, HTML, CSS, Bootstrap, Git, GitHub, Cloud Computing, Sass, JS, y React.
         </p>
-        <a href={cvFilePath} download="Hector_Gonzalez_Pastenes_CV.pdf">
+        <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
           <button className="btn btn-primary fw-bold">Descargar CV</button>
         </a>
       </div>
