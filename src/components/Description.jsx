@@ -1,6 +1,6 @@
 
 const Description = () => {
-  const cvFilePath = '/src/assets/CV/Hector_Gonzalez Pastenes_Resume_26-09-2023-10-49-48.pdf'
+  const cvFilePath = '/assets/CV/Hector_Gonzalez Pastenes_Resume_26-09-2023-10-49-48.pdf'
 
   return (
     <section id="About-me" className="container-description">
