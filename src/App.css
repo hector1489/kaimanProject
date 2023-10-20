@@ -89,7 +89,6 @@ body {
 /*cards*/
 .card {
     width: 30rem;
-    min-height: 270px;
     margin-bottom: 30px;
     box-shadow: 0px 1px 10px rgba(250, 250, 250, 0.336);
     cursor: default;
@@ -169,7 +168,7 @@ li {
 /*Projects*/
 .container-projects {
     width: 100%;
-    height: 90vh;
+    height: auto;
     overflow-y: auto;
 }
 
