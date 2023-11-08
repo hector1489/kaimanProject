@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# REPTAR I.
 
-Descripción breve del proyecto.
+Mi portfolio como desarrollador web.
 
 ## Instalación
 
@@ -37,7 +37,7 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu máquina.
 
 ## Desarrollador
 
-- Hector Gonzalez
+- Hector Gonzalez p.
 
 ## Licencia
 
