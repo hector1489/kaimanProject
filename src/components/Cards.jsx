@@ -9,17 +9,14 @@ const Cards = () => {
   return (
     <>
       {data.map((item) => (
-        <Card
-          key={item.id}
-          className="p-2"
-          style={{ backgroundImage: `url(${item.image})` }}
-        >
+        <Card key={item.id} className="card">
+          <Card.Img variant="top" src={item.image} alt={item.name} />
           <Card.Body>
             <div className="container-card">
-              <Card.Title>{item.name}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
+              <Card.Title className="card-title">{item.name}</Card.Title>
+              <Card.Text className="card-text">{item.description}</Card.Text>
               <Link to={item.url} target="_blank">
-                <Button variant="dark">GitHub</Button>
+                <Button variant="dark" className="card-button">GitHub</Button>
               </Link>
             </div>
           </Card.Body>

@@ -7,7 +7,7 @@ const Browser = () => {
   };
 
   return (
-    <Navbar bg="dark" expand="md">
+    <Navbar className='container-navbar' expand="md">
       <Container>
         <Navbar.Brand>
           <div className="navbar-icon text-white text-decoration-none">
