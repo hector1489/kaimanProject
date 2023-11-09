@@ -53,6 +53,8 @@ body {
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     margin: 50px;
     backdrop-filter: blur(10px);
+    border: 1px solid #2196F3;
+    border-radius: 10px;
 }
 
 
@@ -86,9 +88,7 @@ body {
 /*description*/
 .container-description {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: auto;
     align-items: center;
     text-align: center;
     margin-top: 50px;
@@ -103,14 +103,11 @@ body {
     max-width: 500px;
     border-radius: 10px;
 }
-.section-container {
+.container-skills {
     color: white;
     margin: 20px;
 }
 
-.container-skill {
-    border: 1px solid #2196F3;
-}
 
 
 /*cards*/

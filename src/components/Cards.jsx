@@ -8,8 +8,8 @@ const Cards = () => {
 
   return (
     <>
-      {data.map((item) => (
-        <Card key={item.id} className="card">
+      {data.map((item, index) => (
+        <Card key={item.image} className="card">
           <Card.Img variant="top" src={item.image} alt={item.name} />
           <Card.Body>
             <div className="container-card">
@@ -27,3 +27,4 @@ const Cards = () => {
 }
 
 export default Cards
+

@@ -3,8 +3,8 @@ const Description = () => {
   const cvFilePath = cv
 
   return (
-    <section id="About-me" className="container-description">
-      <div>
+    <section id="About-me" className="container-description d-flex flex-md-row flex-column">
+      <div className="container-parrafoButton flex-grow-1 text-center text-md-left">
         <p className="container-p my-4 fw-bold text-white">
           ¡Hola! Mi nombre es Héctor y soy desarrollador web, desde ya te doy las gracias por visitar mi portafolio.
           Aquí podrás ver las tecnologías con las que he trabajado y mis proyectos. Si te interesa conocerme un poco más,
@@ -17,21 +17,21 @@ const Description = () => {
         </a>
       </div>
 
-      <div className="section-container">
-        <h4 className="fw-bold my-4">Tecnologías :</h4>
+      <div className="container-skills col-md-6">
+        <h4 className="fw-bold my-4">Skill :</h4>
         <div className="row justify-content-center">
-          <Skill iconClass="fab fa-html5 fa-3x mb-3" title="HTML" />
-          <Skill iconClass="fab fa-css3-alt fa-3x mb-3" title="CSS" />
-          <Skill iconClass="fab fa-bootstrap fa-3x mb-3" title="Bootstrap" />
-          <Skill iconClass="fab fa-git-alt fa-3x mb-3" title="Git" />
-          <Skill iconClass="fab fa-github fa-3x mb-3" title="GitHub" />
-          <Skill iconClass="fas fa-cloud fa-3x mb-3" title="Cloud Computing" />
-          <Skill iconClass="fab fa-sass fa-3x mb-3" title="Sass" />
-          <Skill iconClass="fab fa-js fa-3x mb-3" title="JavaScript" />
-          <Skill iconClass="fab fa-react fa-3x mb-3" title="React" />
-          <Skill iconClass="fab fa-node fa-3x mb-3" title="Node.js" />
-          <Skill iconClass="fas fa-database fa-3x mb-3" title="PostgreSQL" />
-          <Skill iconClass="fas fa-key fa-3x mb-3" title="JWT" />
+          <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
+          <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />
+          <Skill iconClass="fab fa-bootstrap fa-2x mb-3" title="Bootstrap" />
+          <Skill iconClass="fab fa-git-alt fa-2x mb-3" title="Git" />
+          <Skill iconClass="fab fa-github fa-2x mb-3" title="GitHub" />
+          <Skill iconClass="fas fa-cloud fa-2x mb-3" title="Cloud Computing" />
+          <Skill iconClass="fab fa-sass fa-2x mb-3" title="Sass" />
+          <Skill iconClass="fab fa-js fa-2x mb-3" title="JavaScript" />
+          <Skill iconClass="fab fa-react fa-2x mb-3" title="React" />
+          <Skill iconClass="fab fa-node fa-2x mb-3" title="Node.js" />
+          <Skill iconClass="fas fa-database fa-2x mb-3" title="PostgreSQL" />
+          <Skill iconClass="fas fa-key fa-2x mb-3" title="JWT" />
         </div>
       </div>
     </section>
@@ -41,12 +41,13 @@ const Description = () => {
 const Skill = ({ iconClass, title }) => {
   return (
     <div className="col-md-4 mb-4">
-      <div className="container-skill bg-dark p-3 rounded text-white">
+      <div className="container-skill bg-dark p-2 rounded text-white">
         <i className={iconClass} />
-        <h3 className="my-3 fw-bold">{title}</h3>
+        <h3 className="my-2 fw-bold" style={{ fontSize: '1rem' }}>{title}</h3>
       </div>
     </div>
   )
 }
+
 
 export default Description

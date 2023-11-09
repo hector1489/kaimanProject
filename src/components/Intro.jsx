@@ -4,10 +4,10 @@ const Intro = () => {
     <div className="container-intro">
       <div className="intro-text">
         <div className="p-2">
-          <h1 className="fw-bold">Hector Gonzalez P.</h1>
+          <h1 className="fw-bold">"Desarrollador web."</h1>
         </div>
-        <div className="p-2">
-          <h5>"Desarrollador web."</h5>
+        <div className="p-2 fw-bold">
+          <h5>Hector Gonzalez P.</h5>
         </div>
       </div>
       <div className="flex-grow-1 d-flex justify-content-end align-items-center me-4">
