@@ -52,7 +52,7 @@ const Contacto = () => {
           <Form.Label className="text-white text-decoration-none">Escribe tu mensaje aquí:</Form.Label>
           <Form.Control as="textarea" rows={3} name="message" value={formData.message} onChange={handleChange} required />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="btn css-button-gradient--5 fw-bold" type="submit">
         Enviar
       </Button>
         <ul className="text-white text-decoration-none">

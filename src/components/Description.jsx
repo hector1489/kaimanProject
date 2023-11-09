@@ -13,8 +13,9 @@ const Description = () => {
         </p>
 
         <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
-          <button className="btn btn-primary fw-bold">Descargar CV</button>
+          <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
         </a>
+
       </div>
 
       <div className="container-skills col-md-6">

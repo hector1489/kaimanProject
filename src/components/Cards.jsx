@@ -16,7 +16,7 @@ const Cards = () => {
               <Card.Title className="card-title">{item.name}</Card.Title>
               <Card.Text className="card-text">{item.description}</Card.Text>
               <Link to={item.url} target="_blank">
-                <Button variant="dark" className="card-button">GitHub</Button>
+                <Button className="btn css-button-gradient--5 fw-bold">GitHub</Button>
               </Link>
             </div>
           </Card.Body>
