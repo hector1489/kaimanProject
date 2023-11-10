@@ -7,7 +7,7 @@ const Home= () => {
     return (
         <>
         <br />
-        <Intro />
+        <Intro id="top" />
         <br />
         <Description />
         <br />
@@ -15,6 +15,11 @@ const Home= () => {
         <br />
         <Form />
         <br/>
+        <div className="container-arrow d-flex">
+            <a href="#top" className="social-icon">
+            <i className="fa-solid fa-angle-up fa-flip fa-2xl"></i>
+            </a>
+        </ div>
         </>
     );
 }

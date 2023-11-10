@@ -101,6 +101,10 @@ body {
     margin-top: 50px;
 }
 
+.container-parrafoButton {
+
+}
+
 .container-p {
     padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
@@ -110,6 +114,7 @@ body {
     max-width: 500px;
     border-radius: 10px;
 }
+
 .container-skills {
     color: white;
     margin: 20px;
@@ -255,6 +260,17 @@ li {
     border-radius: 10px;
 }
 
+
+/*arrow*/
+.container-arrow {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*footer*/
 .container-footer {
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.3);
