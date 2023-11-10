@@ -14,7 +14,7 @@ const Browser = () => {
             <i className="fa-solid fa-user-astronaut fa-spin fa-2xl" />
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className='burguer-button' />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <NavLink to="/" className={setActiveClass}>Home</NavLink>

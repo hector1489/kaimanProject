@@ -33,6 +33,9 @@ body {
 .navbar-nav .nav-link:hover {
     color: #2196F3;
 }
+.burguer-button {
+    border: 1px solid #2196F3;
+}
 
 
 .container-intro {
