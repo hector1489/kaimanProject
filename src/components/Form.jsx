@@ -56,8 +56,7 @@ const Contacto = () => {
         Enviar
       </Button>
         <ul className="text-white text-decoration-none">
-          <li><span className="fw-bold me-3">Mail:</span> g.p.hector.alejandro@gmail.com</li>
-          <li><span className="fw-bold me-2">Fono:</span> +569-50882834</li>
+          <li className="my-3"><span className="fw-bold me-3">Mail:</span> g.p.hector.alejandro@gmail.com</li>
         </ul>
         <div className="container-icon">
           <div className="col-12">

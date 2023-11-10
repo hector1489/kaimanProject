@@ -55,8 +55,12 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid #2196F3;
     border-radius: 10px;
+
 }
 
+.text-color-uno {
+    color: #2196F3;
+}
 
 .intro-text>div {
     margin: 5px;
@@ -131,6 +135,13 @@ body {
     top: 2px;
   }
 
+.title-skill {
+    backdrop-filter: blur(10px);
+    border: 1px solid #2196F3;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+}
+
 
 /*cards*/
 .card {
@@ -144,7 +155,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     transform: translateY(-5px);
 }
 
@@ -182,12 +193,6 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
-
-.card-button:hover {
-    background-color: #1fb839;
-}
-
-
 
 /*form*/
 .container-contacts {
@@ -247,3 +252,8 @@ li {
     border-radius: 10px;
 }
 
+.container-footer {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #2196F3;
+}

@@ -8,8 +8,8 @@ const Description = () => {
         <p className="container-p my-4 fw-bold text-white">
           ¡Hola! Mi nombre es Héctor y soy desarrollador web, desde ya te doy las gracias por visitar mi portafolio.
           Aquí podrás ver las tecnologías con las que he trabajado y mis proyectos. Si te interesa conocerme un poco más,
-          puedes descargar mi CV haciendo clic en el botón inferior "Descargar CV" o haciendo clic en los iconos sociales
-          en la sección de "Contacts".
+          puedes descargar mi <span className="text-color-uno"> CV  </span>  haciendo clic en el botón inferior "  <span className="text-color-uno"> Descargar CV  </span> " o haciendo clic en los iconos sociales
+          en la sección de " <span className="text-color-uno"> Contacts  </span>  ".
         </p>
 
         <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
@@ -19,7 +19,7 @@ const Description = () => {
       </div>
 
       <div className="container-skills col-md-6">
-        <h4 className="fw-bold my-4">Skill :</h4>
+        <h4 className="title-skill fw-bold my-4"> Skill :</h4>
         <div className="row justify-content-center">
           <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
           <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />
