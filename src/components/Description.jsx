@@ -19,7 +19,7 @@ const Description = () => {
       </div>
 
       <div className="container-skills col-md-6">
-        <h4 className="title-skill fw-bold my-4 animated-text-dos"> Skill<span className="text-color-uno"> :</span></h4>
+        <h4 className="title-skill fw-bold my-4 animated-text-dos"> Skill<span className="text-warning"> :</span></h4>
         <div className="row justify-content-center">
           <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
           <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />

@@ -14,7 +14,7 @@ const Cards = () => {
           <Card.Body>
             <div className="container-card">
               <Card.Title className="card-title">{item.name}</Card.Title>
-              <Card.Text className="card-text">{item.description}</Card.Text>
+              <Card.Text className="card-text text-warning">{item.description}</Card.Text>
               <Link to={item.url} target="_blank">
                 <Button className="btn css-button-gradient--5 fw-bold">GitHub</Button>
               </Link>

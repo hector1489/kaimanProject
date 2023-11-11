@@ -72,10 +72,6 @@ body {
     color: #2196F3;
 }
 
-.intro-text>div {
-    margin: 5px;
-}
-
 .rounded-image {
     width: 100%;
     max-width: 400px;
