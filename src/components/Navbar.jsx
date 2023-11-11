@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import interstellar from "../assets/interstellarCover.mp3"
 
 const Browser = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false)
@@ -35,7 +36,7 @@ const Browser = () => {
               <i className={`fa-solid fa-user-astronaut fa-spin fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
             </button>
           </div>
-          <audio id="audioPlayer" src="/src/assets/interstellarCover.mp3"></audio>
+          <audio id="audioPlayer" src={ interstellar }></audio>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="burguer-button" />
         <Navbar.Collapse id="responsive-navbar-nav">
