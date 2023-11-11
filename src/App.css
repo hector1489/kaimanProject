@@ -288,10 +288,23 @@ li {
     border-radius: 10px;
 }
 
-.container-parrafo-video>p.animated-text {
+.animated-text {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text-dos {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
 }
 
 @keyframes fadeInUp {
