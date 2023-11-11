@@ -25,7 +25,7 @@ const Videos = () => {
           </video>
         </div>
         <div className='container-parrafo-video col-md-6'>
-          <p className='text-center text-warning fw-bold p-2 animated-text'>
+          <p className='text-center text-warning fw-bold p-2 animated-text-tres'>
             Mi dedicación al perfeccionamiento de mis habilidades informáticas,
             a lo que coloquialmente llamo " <span className="text-color-uno">kung-fu informático</span> ",
             me ha permitido desarrollar la capacidad de crear una sólida base de datos.

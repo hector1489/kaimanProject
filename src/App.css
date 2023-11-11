@@ -315,3 +315,16 @@ li {
         transform: translateY(0);
     }
 }
+
+.animated-text-tres {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
