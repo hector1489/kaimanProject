@@ -42,16 +42,16 @@ const Browser = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <NavLink to="/" className={setActiveClass}>
-              Home
+              Inicio
             </NavLink>
             <NavLink to="/viewsdescription" className={setActiveClass}>
-              Description
+              Descripción
             </NavLink>
             <NavLink to="/projects" className={setActiveClass}>
-              Projects
+              Proyectos
             </NavLink>
             <NavLink to="/Contacts" className={setActiveClass}>
-              Contacts
+              Contacto
             </NavLink>
           </Nav>
         </Navbar.Collapse>
