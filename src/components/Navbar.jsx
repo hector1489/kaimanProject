@@ -35,7 +35,7 @@ const Browser = () => {
               <i className={`fa-solid fa-user-astronaut fa-spin fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
             </button>
           </div>
-          <audio id="audioPlayer" src="src/assets/Interstellar EPIC PIANO SUITE 12 min cover.mp3"></audio>
+          <audio id="audioPlayer" src="/src/assets/interstellarCover.mp3"></audio>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="burguer-button" />
         <Navbar.Collapse id="responsive-navbar-nav">
