@@ -33,6 +33,7 @@ body {
 .navbar-nav .nav-link:hover {
     color: #2196F3;
 }
+
 .burguer-button {
     border: 1px solid #2196F3;
 }
@@ -101,10 +102,6 @@ body {
     margin-top: 50px;
 }
 
-.container-parrafoButton {
-
-}
-
 .container-p {
     padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
@@ -135,13 +132,15 @@ body {
     border: none;
     background-size: 120% auto;
     background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
-  }
-  .css-button-gradient--5:hover {
+}
+
+.css-button-gradient--5:hover {
     background-position: right center;
-  }
-  .css-button-gradient--5:active {
+}
+
+.css-button-gradient--5:active {
     top: 2px;
-  }
+}
 
 .title-skill {
     backdrop-filter: blur(10px);
@@ -250,7 +249,7 @@ li {
     padding-top: 10px;
 }
 
-.container-projects h1{
+.container-projects h1 {
     padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     backdrop-filter: blur(20px);
@@ -275,4 +274,29 @@ li {
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid #2196F3;
+}
+
+/*videos*/
+
+.container-videos {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2196F3;
+    border-radius: 10px;
+}
+
+.container-parrafo-video>p.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
