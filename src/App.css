@@ -294,6 +294,7 @@ li {
     border-radius: 10px;
 }
 
+/*animaciones*/
 .animated-text {
     opacity: 0;
     transform: translateY(20px);
