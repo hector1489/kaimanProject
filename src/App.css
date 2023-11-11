@@ -38,7 +38,13 @@ body {
     border: 1px solid #2196F3;
 }
 
+.button-icon-astro {
+    background: none;
+    border: none;
+    padding: 0;
+}
 
+/*intro*/
 .container-intro {
     width: 100%;
     height: auto;
