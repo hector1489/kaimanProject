@@ -6,12 +6,13 @@ const Description = () => {
     <section id="About-me" className="container-description d-flex flex-md-row flex-column">
       <div className="container-parrafoButton flex-grow-1 text-center text-md-left">
         <p className="container-p my-4 fw-bold text-white animated-text-dos">
-          ¡Hola! Mi nombre es Héctor y soy desarrollador web, desde ya te doy las gracias por visitar mi portafolio.
-          Aquí podrás ver las tecnologías con las que he trabajado y mis proyectos. Si te interesa conocerme un poco más,
-          puedes descargar mi <span className="text-color-uno"> CV  </span>  haciendo clic en el botón inferior "  <span className="text-color-uno"> Descargar CV  </span> " o haciendo clic en los iconos sociales
-          en la sección de " <span className="text-color-uno"> Contacts  </span>  ".
+          ¡Hola! Soy Héctor, un apasionado desarrollador web.
+          Agradezco tu visita a mi portafolio, donde podrás explorar
+          las tecnologías con las que he trabajado y ver mis proyectos.
+          Si deseas conocerme mejor, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
+          clic en el botón " <span className="text-color-uno">Descargar CV</span> "
+          debajo o acceder a mis perfiles sociales en la sección " <span className="text-color-uno">Contactos</span> ".
         </p>
-
         <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
           <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
         </a>
