@@ -4,7 +4,9 @@ const Intro = () => {
     <div className="container-intro">
       <div className="intro-text animated-text-dos">
         <div className="p-2">
-          <h1 className="fw-bold"> "Desarrollador <span className="text-color-uno"> web </span> ." </h1>
+          <h1 className="fw-bold">
+          "Desarrollador <span className="text-color-uno"> web </span><span className="text-warning">.</span> "
+          </h1>
         </div>
         <div className="p-2 fw-bold">
           <h5>Hector Gonzalez P.</h5>

@@ -44,6 +44,10 @@ body {
     padding: 0;
 }
 
+.button-icon-astro>i:hover {
+    color: #1fb839;
+}
+
 /*intro*/
 .container-intro {
     width: 100%;
