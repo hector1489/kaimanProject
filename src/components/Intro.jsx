@@ -13,7 +13,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="flex-grow-1 d-flex justify-content-end align-items-center me-4 animated-text-dos">
-        <img className="rounded-image" src="./src/assets/img/foto2.jpg" alt="foto2" />
+        <img className="rounded-image" src="https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/foto2.jpg" alt="foto2" />
       </div>
     </div>
   )
