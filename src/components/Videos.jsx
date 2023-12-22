@@ -23,7 +23,7 @@ const Videos = () => {
       <div className='container-videos d-flex flex-column-reverse flex-md-row'>
       <div className='container-video col-md-6'>
         <video ref={videoRef} width="100%" height="100%" controls autoPlay muted>
-          <source src="public/itDojoFull.mp4" type="video/mp4" />
+          <source src="/public/itDojoFull.mp4" type="video/mp4" />
         </video>
       </div>
       <div className='container-parrafo-video col-md-6'>
