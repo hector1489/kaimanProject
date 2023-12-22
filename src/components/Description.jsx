@@ -6,8 +6,8 @@ const Description = () => {
     <section id="About-me" className="container-description d-flex flex-md-row flex-column">
       <div className="container-parrafoButton flex-grow-1 text-center text-md-left">
         <p className="container-p my-4 fw-bold text-white animated-text-dos">
-          ¡Hola! Soy Héctor, un apasionado desarrollador web.
-          Agradezco tu visita a mi portafolio, donde podrás explorar
+          ¡Hola! Soy Héctor, un apasionado desarrollador web fullStack javaScript.
+          Desde ya agradezco tu visita a mi portafolio, donde podrás explorar
           las tecnologías con las que he trabajado y ver mis proyectos.
           Si deseas conocerme mejor, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
           clic en el botón " <span className="text-color-uno">Descargar CV</span> "
@@ -16,7 +16,6 @@ const Description = () => {
         <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
           <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
         </a>
-
       </div>
 
       <div className="container-skills col-md-6">
