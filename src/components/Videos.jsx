@@ -23,7 +23,7 @@ const Videos = () => {
       <div className='container-videos d-flex flex-column-reverse flex-md-row'>
       <div className='container-video col-md-6'>
         <video ref={videoRef} width="100%" height="100%" controls autoPlay muted>
-          <source src="https://github.com/hector1489/kaimanProject/blob/7d9517db89f949ec9f537d84bba402e05dcb4f39/src/assets/video/itDojoFull.mp4" type="video/mp4" />
+          <source src="/kaimanProject/src/assets/video/itDojoFull.mp4" type="video/mp4" />
         </video>
       </div>
       <div className='container-parrafo-video col-md-6'>
