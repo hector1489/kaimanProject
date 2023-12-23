@@ -1,4 +1,4 @@
-import cv from "../assets/CV/Hector_Gonzalez Pastenes_Resume_26-09-2023-10-49-48.pdf"
+import cv from "../assets/CV/CV.pdf"
 const Description = () => {
   const cvFilePath = cv
 
