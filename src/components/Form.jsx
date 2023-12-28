@@ -38,7 +38,7 @@ const Contacto = () => {
 
   return (
     <Form className="container-form animated-text-dos" onSubmit={handleSubmit}>
-      <Form.Group className="mb-3 form-group bg-dark">
+      <Form.Group className="m-2 form-group bg-dark">
         <Form.Label className="container-fluid my-4 fw-bold text-white text-decoration-none text-uppercase">Contacto</Form.Label>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label className="text-white text-decoration-none">Nombre</Form.Label>
