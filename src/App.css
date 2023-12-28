@@ -11,7 +11,7 @@ body {
     height: auto;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(/src/assets/img/webb1.jpg);
+        url(/src/assets/img/bg4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
