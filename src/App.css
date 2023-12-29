@@ -11,7 +11,7 @@ body {
     height: auto;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(/src/assets/img/webb1.jpg);
+        url(/src/assets/img/bg6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -317,7 +317,7 @@ li {
     animation: fadeInUp 1s forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInUpDos {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -330,7 +330,7 @@ li {
     animation: fadeInUp 1s forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInUpTres {
     to {
         opacity: 1;
         transform: translateY(0);
