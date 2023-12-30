@@ -63,6 +63,20 @@
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/inmobiliaria.png",
         "description": "Inmobiliaria es mi landing page de prueba, donde demuestro mis habilidades en las propiedades de display y JavaScript. Además de la estructura sólida, he incorporado alertas para mejorar la experiencia del usuario.",
         "url": "https://github.com/hector1489/inmobiliariajs"
+      },
+      {
+        "id": 10,
+        "name": "Conversor de Monedas",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Captura_conversor.png",
+        "description": "Conversor de monedas que obtiene los datos de mindicador.cl y luego muestra un historial del valor de la moneda a convertir en un grafico de los últimos 10 días.",
+        "url": "https://github.com/hector1489/conversorMonedas"
+      },
+      {
+        "id": 11,
+        "name": "Pet Project",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Pet_Project.png",
+        "description": "Aplicacion centrada en mostrar imagenes de perritos para su adopción. Realizada en Vite + React, y React-Bootstrap.",
+        "url": "https://github.com/hector1489/petProject/tree/main"
       }
     ]
   }
