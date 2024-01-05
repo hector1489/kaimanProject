@@ -258,7 +258,7 @@ li {
     padding-top: 10px;
 }
 
-.container-projects h1 {
+.container-projects h2 {
     padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     backdrop-filter: blur(20px);
@@ -335,4 +335,24 @@ li {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*Home*/
+
+.container-project-home {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 10px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    backdrop-filter: blur(20px);
+    border: 1px solid #2196F3;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 10px;
+    gap: 10px;
 }
