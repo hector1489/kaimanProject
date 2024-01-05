@@ -347,7 +347,6 @@ li {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    padding-top: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     backdrop-filter: blur(20px);
     border: 1px solid #2196F3;

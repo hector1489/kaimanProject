@@ -27,7 +27,7 @@ const Home = () => {
       <div className="mt-5">
         <div className='container-project-home'>
           <h5
-          className='text-white fw-bold'
+          className='text-white fw-bold m-2'
           >
           Puedes echar un vistazo a mis proyectos en <span className="text-warning"> :</span>
           </h5>
