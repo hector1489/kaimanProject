@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 import '../src/App.css'
 import ViewsDescription from "./views/ViwesDescription"
 import Home from "./views/Home"
@@ -34,7 +33,6 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </DataContext.Provider>
   )

@@ -3,6 +3,7 @@ import Intro from "../components/Intro"
 import Description from "../components/Description"
 import Form from "../components/Form"
 import Videos from "../components/Videos"
+import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
@@ -48,6 +49,9 @@ const Home = () => {
           <i className="fa-solid fa-angle-up fa-flip fa-2xl"></i>
         </a>
       </ div>
+      <div className="mt-2">
+        <Footer />
+      </div>
     </>
   );
 }
