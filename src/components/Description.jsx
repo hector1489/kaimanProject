@@ -3,8 +3,8 @@ const Description = () => {
   const cvFilePath = cv
 
   return (
-    <div id="About-me" className="container-description d-flex flex-md-row flex-column">
-      <div className="container-parrafoButton flex-grow-1 text-center text-md-left">
+    <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1">
+      <div className="d-flex flex-column text-center text-md-left">
         <p className="container-p my-4 fw-bold text-white animated-text-dos">
           ¡Hola! Soy Héctor, un apasionado desarrollador web fullStack javaScript.
           Desde ya agradezco tu visita a mi portafolio, donde podrás explorar
@@ -18,9 +18,9 @@ const Description = () => {
         </a>
       </div>
 
-      <div className="container-skills col-md-6">
-        <h4 className="title-skill fw-bold my-4 animated-text-dos"> Skills<span className="text-warning"> :</span></h4>
-        <div className="row justify-content-center animated-text-tres">
+      <div className="col-md-6 ">
+        <h4 className="title-skill fw-bold my-4 animated-text-dos text-white"> Skills<span className="text-warning"> :</span></h4>
+        <div className="container row justify-content-center animated-text-tres">
           <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
           <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />
           <Skill iconClass="fab fa-bootstrap fa-2x mb-3" title="Bootstrap" />

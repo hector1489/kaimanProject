@@ -107,9 +107,9 @@ body {
 .container-description {
     width: 100%;
     height: auto;
-    align-items: center;
     text-align: center;
     margin-top: 50px;
+    gap: 20px;
 }
 
 .container-p {
@@ -122,10 +122,6 @@ body {
     border-radius: 10px;
 }
 
-.container-skills {
-    color: white;
-    margin: 20px;
-}
 
 .css-button-gradient--5 {
     min-width: 130px;
