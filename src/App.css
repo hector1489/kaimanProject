@@ -298,6 +298,10 @@ li {
     border-radius: 10px;
 }
 
+.button-links-video {
+    gap: 10px;
+}
+
 /*animaciones*/
 .animated-text {
     opacity: 0;
