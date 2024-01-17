@@ -20,7 +20,8 @@ const Description = () => {
 
       <div className="col-md-6 ">
         <h4 className="title-skill fw-bold my-4 animated-text-dos text-white"> Skills<span className="text-warning"> :</span></h4>
-        <div className="container row justify-content-center animated-text-tres">
+       <div className="container">
+        <div className="row justify-content-center animated-text-tres">
           <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
           <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />
           <Skill iconClass="fab fa-bootstrap fa-2x mb-3" title="Bootstrap" />
@@ -33,6 +34,7 @@ const Description = () => {
           <Skill iconClass="fab fa-node fa-2x mb-3" title="Node.js" />
           <Skill iconClass="fas fa-database fa-2x mb-3" title="PostgreSQL" />
           <Skill iconClass="fas fa-key fa-2x mb-3" title="JWT" />
+        </div>
         </div>
       </div>
     </div>

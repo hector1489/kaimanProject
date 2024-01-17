@@ -16,8 +16,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 56px;
 }
-
 /* Navbar */
 .container-navbar {
     backdrop-filter: blur(10px);
@@ -61,6 +61,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin-top: 100px;
 }
 
 .intro-text {

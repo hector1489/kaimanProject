@@ -28,7 +28,7 @@ const Browser = () => {
   }, [isAudioPlaying])
 
   return (
-    <Navbar className="container-navbar" expand="md">
+    <Navbar className="container-navbar" expand="md" fixed="top">
       <Container>
         <Navbar.Brand>
           <div className="navbar-icon text-white text-decoration-none">
