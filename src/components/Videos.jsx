@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react'
-import { Link } from "react-router-dom"
 import video from '../assets/video/itDojo-1.mp4'
 
 const Videos = () => {
