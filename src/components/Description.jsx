@@ -1,4 +1,4 @@
-import cv from "../assets/CV/CV2.pdf"
+import cv from "../assets/CV/HectorGonzalez-CV.pdf"
 const Description = () => {
   const cvFilePath = cv
 
@@ -13,7 +13,7 @@ const Description = () => {
           clic en el botón " <span className="text-color-uno">Descargar CV</span> "
           debajo o acceder a mis perfiles sociales en la sección " <span className="text-color-uno">Contactos</span> ".
         </p>
-        <a href={cvFilePath} download="Hector_Gonzalez Pastenes_Resume.pdf">
+        <a href={cvFilePath} download="Hector_Gonzalez_CV.pdf">
           <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
         </a>
       </div>
