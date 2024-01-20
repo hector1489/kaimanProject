@@ -10,17 +10,17 @@
       },
       {
         "id": 2,
-        "name": "Poke.Dex",
-        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/pokeDex.png",
-        "description": "Aplicación centrada en el consumo eficiente de API y la implementación de Context en React. Este proyecto demuestra mi habilidad para manejar datos dinámicos y gestionar el estado de la aplicación de manera efectiva.",
-        "url": "https://github.com/hector1489/Poke.dex"
+        "name": "PyJ Creaciones",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/PyJ.png",
+        "description": "Desarrollé un carrito de compras personalizado utilizando Vite y React. Este proyecto destaca mi capacidad para crear aplicaciones web dinámicas y eficientes para un cliente Pyme.",
+        "url": "https://github.com/hector1489/PyJ_Creaciones"
       },
       {
         "id": 3,
-        "name": "Ecommerce Pizza",
-        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/mammaMia.png",
-        "description": "Ecommerce Pizza es mi proyecto de comercio electrónico desarrollado en Vite y React, con la elegancia añadida de React-bootstrap. Esta aplicación destaca mi habilidad para crear interfaces de usuario interactivas y atractivas.",
-        "url": "https://github.com/hector1489/pizzasEcommerce"
+        "name": "Mi Repertorio",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Mi_Repertorio.png",
+        "description": "Aplicacion tipo CRUD que modifica y elimina canciones almacenadas en un archivo JSON.",
+        "url": "https://github.com/hector1489/mi_Repertorio"
       },
       {
         "id": 4,
@@ -31,83 +31,76 @@
       },
       {
         "id": 5,
+        "name": "Poke.Dex",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/pokeDex.png",
+        "description": "Aplicación centrada en el consumo eficiente de API y la implementación de Context en React. Este proyecto demuestra mi habilidad para manejar datos dinámicos y gestionar el estado de la aplicación de manera efectiva.",
+        "url": "https://github.com/hector1489/Poke.dex"
+      },
+      {
+        "id": 6,
+        "name": "Ecommerce Pizza",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/mammaMia.png",
+        "description": "Ecommerce Pizza es mi proyecto de comercio electrónico desarrollado en Vite y React, con la elegancia añadida de React-bootstrap. Esta aplicación destaca mi habilidad para crear interfaces de usuario interactivas y atractivas.",
+        "url": "https://github.com/hector1489/pizzasEcommerce"
+      },
+      {
+        "id": 7,
         "name": "Pet Project",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Pet_Project.png",
         "description": "Aplicacion centrada en mostrar imagenes de perritos para su adopción. Realizada en Vite + React, y React-Bootstrap.",
         "url": "https://github.com/hector1489/petProject/tree/main"
       },
       {
-        "id": 6,
+        "id": 8,
         "name": "Star-Wars.Dex",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/starwarsapi.png",
         "description": "Aplicación dedicada al consumo de la API de Star Wars (Swapi). La aplicación presenta información detallada en tarjetas, con imágenes incorporadas desde un directorio local. Este proyecto ilustra mi capacidad para integrar datos externos de manera efectiva.",
         "url": "https://github.com/hector1489/starWarsApi"
       },
       {
-        "id": 7,
+        "id": 9,
         "name": "Natural Pics",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/natural_Pics.png",
         "description": "Plataforma dedicada a fotógrafos que promueven el interés por el cuidado ambiental y las fotos de paisajes naturales sin filtros. Esta aplicacion muestra y edita el estado global utilizando Context Api.",
         "url": "https://github.com/hector1489/naturalPics"
       },
       {
-        "id": 8,
-        "name": "PyJ Creaciones",
-        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/PyJ.png",
-        "description": "Desarrollé un carrito de compras personalizado utilizando Vite y React. Este proyecto destaca mi capacidad para crear aplicaciones web dinámicas y eficientes para un cliente Pyme.",
-        "url": "https://github.com/hector1489/PyJ_Creaciones"
-      },
-      {
-        "id": 9,
+        "id": 10,
         "name": "Poke Lite",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Poke_Lite2.png",
         "description": "Con tema del equipo Rocket. Esta aplicacion es una versión ligera del proyecto Poke.Dex",
         "url": "https://github.com/hector1489/PokeLite"
       },
       {
-        "id": 10,
-        "name": "Api Diaries",
-        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Api_Diaries.png",
-        "description": "Api para el regsitro de bitacora. Siguiendo un tutorial de midudev en ejercicio para mejorar el TypeScript.",
-        "url": "https://github.com/hector1489/api_nodejs_typescript/tree/main/src/services"
-      },
-      {
         "id": 11,
-        "name": "Mi Repertorio",
-        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Mi_Repertorio.png",
-        "description": "Aplicacion tipo CRUD que modifica y elimina canciones almacenadas en un archivo JSON.",
-        "url": "https://github.com/hector1489/mi_Repertorio"
-      },
-      {
-        "id": 12,
         "name": "Happy Cake",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Happy_Cacke2.png",
         "description": "Tienda simple con dos vistas utilizando React y React Router.",
         "url": "https://github.com/hector1489/HappyCake"
       },
       {
-        "id": 13,
+        "id": 12,
         "name": "Inmobiliaria",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/inmobiliaria.png",
         "description": "Inmobiliaria es mi landing page de prueba, donde demuestro mis habilidades en las propiedades de display y JavaScript. Además de la estructura sólida, he incorporado alertas para mejorar la experiencia del usuario.",
         "url": "https://github.com/hector1489/inmobiliariajs"
       },
       {
-        "id": 14,
+        "id": 13,
         "name": "Conversor de Monedas",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Captura_conversor.png",
         "description": "Conversor de monedas que obtiene los datos de mindicador.cl y luego muestra un historial del valor de la moneda a convertir en un grafico de los últimos 10 días.",
         "url": "https://github.com/hector1489/conversorMonedas"
       },
       {
-        "id": 15,
+        "id": 14,
         "name": "Iguana page",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/iguana.png",
         "description": "Iguana Page es un proyecto de blog de prueba que demuestra mi destreza en el manejo de diseño con display en flex y float. Este proyecto es un testimonio de mi capacidad para crear interfaces atractivas y responsivas.",
         "url": "https://github.com/hector1489/iguanapage"
       },
       {
-        "id": 16,
+        "id": 15,
         "name": "Cuppon",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/cuppon.png",
         "description": "Cuppon es un documento HTML enriquecido con implementación de CSS y Bootstrap. Este proyecto refleja mi habilidad para crear páginas web elegantes y funcionales.",
