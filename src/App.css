@@ -18,6 +18,27 @@ body {
     background-position: center;
     margin-top: 56px;
 }
+
+/*ScrollBar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #aa781c;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:  #004e92;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:  #073c69 ;
+}
+
+
+
 /* Navbar */
 .container-navbar {
     backdrop-filter: blur(10px);
