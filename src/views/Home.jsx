@@ -18,16 +18,22 @@ const Home = () => {
 
   return (
     <>
-      <div className="mt-5">
+      <div className="p-4">
         <Intro />
       </div>
-      <div className="mt-2">
-        <Description />
-      </div>
-      <div className="mt-2">
-        <Videos />
-      </div>
-      <div className="mt-5 p-1">
+
+      <div className="container d-flex flex-column flex-md-row  mt-3 gap-5">
+
+        <div className="container-project-home text-center fw-bold p-2">
+          <p className='text-white'>
+          <span className='text-warning'>¡Hola!</span> Soy un apasionado desarrollador web Full Stack especializado en JavaScript.
+            Mi experiencia previa se ha centrado en el sector de la salud, colaborando durante 14 años como; técnico en enfermería,
+            rescatista y despachador de rescates a nivel nacional.
+            Además, he participado en proyectos freelance con la agrupación <span className='text-warning'>"Amigos del Puangue"</span>,
+            desempeñándome como desarollador backend y director.
+          </p>
+        </div>
+
         <div className='container-project-home text-center'>
           <h5
             className='text-white fw-bold m-2'
@@ -49,6 +55,14 @@ const Home = () => {
             </Button>
           </div>
         </div>
+      </div>
+
+      <div className="m-5">
+        <Videos />
+      </div>
+
+      <div className="m-4">
+        <Description />
       </div>
 
       <div className="container-arrow d-flex mt-4">

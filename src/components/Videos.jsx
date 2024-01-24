@@ -19,7 +19,7 @@ const Videos = () => {
   }, [])
 
   return (
-    <div className='container-videos m-1'>
+    <div className='container-videos m-5'>
       <div className='d-flex flex-column-reverse flex-md-row'>
         <div className='container-video col-md-6'>
           <video ref={videoRef} width="100%" height="100%" controls autoPlay muted>
