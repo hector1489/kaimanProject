@@ -1,4 +1,4 @@
-import cv from "../assets/CV/HectorGonzalez-CV.pdf"
+import cv from "../assets/CV/HectorGonzalezCV.pdf"
 const Description = () => {
   const cvFilePath = cv
 
