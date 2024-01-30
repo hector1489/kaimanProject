@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Description = () => {
   const cvFilePath = cv
+
   const navigate = useNavigate()
 
   const handleGoToprojects = () => {
