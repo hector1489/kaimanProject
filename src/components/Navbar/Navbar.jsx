@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import lofi from "../assets/lofi.mp3"
+import lofi from "../../assets/lofi.mp3"
+import './Navbar.css'
 
 const Browser = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false)

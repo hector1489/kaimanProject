@@ -1,0 +1,39 @@
+/*form*/
+.container-contacts {
+    padding: 50px;
+}
+
+.container-form {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 500px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container-icon {
+    margin: 50px;
+}
+
+.social-icon {
+    color: rgb(48, 120, 245);
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #1fb839;
+}
+
+li {
+    margin: 10px;
+    text-align: start;
+}

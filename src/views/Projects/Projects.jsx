@@ -1,4 +1,5 @@
-import Cards from "../components/Cards"
+import { Cards } from "../../components/index.jsx"
+import './Projects.css'
 
 const Projects = () => {
   return (

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Form, Button} from "react-bootstrap"
 import emailjs from "emailjs-com"
+import './Form.css'
 
 const Contacto = () => {
   const initialState = {
@@ -37,7 +38,7 @@ const Contacto = () => {
 
 
   return (
-    <Form className="container-form animated-text-dos" onSubmit={handleSubmit}>
+    <Form className="container-form" onSubmit={handleSubmit}>
       <Form.Group className="m-2 form-group bg-dark">
         <Form.Label className="container-fluid my-4 fw-bold text-white text-decoration-none text-uppercase">Contacto</Form.Label>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

@@ -1,0 +1,69 @@
+.container-description {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.container-p {
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    border: 1px solid #2196F3;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.css-button-gradient--5 {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+}
+
+.css-button-gradient--5:hover {
+    background-position: right center;
+}
+
+.css-button-gradient--5:active {
+    top: 2px;
+}
+
+.title-skill {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #2196F3;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+}
+
+.container-project-home {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #2196F3;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 10px;
+    gap: 20px;
+}

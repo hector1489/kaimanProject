@@ -1,0 +1,5 @@
+export { default as Home } from './Home/Home.jsx'
+export { default as Description } from  './Description/ViwesDescription.jsx'
+export { default as Projects } from './Projects/Projects.jsx'
+export { default as Contacts } from './Contacts/Contacts.jsx'
+export { default as NotFound } from './NotFound.jsx'

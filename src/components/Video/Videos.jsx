@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
-import video from '../assets/video/itDojo-1.mp4'
+import video from '../../assets/video/itDojo-1.mp4'
+import '../Video/Video.css'
 
 const Videos = () => {
   const videoRef = useRef(null)
@@ -19,7 +20,7 @@ const Videos = () => {
   }, [])
 
   return (
-    <div className='container-videos m-5'>
+    <div className='container-videos m-2'>
       <div className='d-flex flex-column-reverse flex-md-row'>
         <div className='container-video col-md-6'>
           <video ref={videoRef} width="100%" height="100%" controls autoPlay muted>
@@ -28,7 +29,7 @@ const Videos = () => {
         </div>
         <div className=' col-md-6'>
           <div className='container-parrafo-video d-flex flex-column justify-content-center'>
-            <p className='text-center text-warning fw-bold p-2 animated-text-tres'>
+            <p className='text-center text-warning p-2'>
               Mi dedicación al perfeccionamiento de mis habilidades informáticas,
               me ha permitido desarrollar la capacidad de crear un solido e-commerce para mi proyecto final en Desafios Latam.
               En este puse a prueba mi adaptabilidad cambiando de javaSript a typeScript en las ultimas dos semanas.

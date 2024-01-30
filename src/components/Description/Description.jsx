@@ -1,11 +1,26 @@
-import cv from "../assets/CV/HectorGonzalezCV.pdf"
+import cv from "../../assets/CV/HectorGonzalezCV.pdf"
+import './Description.css'
+import { Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+
+
 const Description = () => {
   const cvFilePath = cv
+  const navigate = useNavigate()
+
+  const handleGoToprojects = () => {
+    navigate('/Projects')
+  }
+
+  const handleGoToContact = () => {
+    navigate('/Contacts')
+  }
 
   return (
-    <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1 animated-text-dos ">
+    <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1">
+      <div className="d-flex flex-column gap-4">
       <div className="d-flex flex-column text-center text-md-left">
-        <p className="container-p my-4 fw-bold text-white">
+        <p className="container-p my-4 text-white">
           Agradezco tu visita a mi portafolio, donde podrás explorar
           las tecnologías con las que he trabajado y conocer mis  proyectos.
           Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
@@ -16,6 +31,29 @@ const Description = () => {
           <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
         </a>
       </div>
+
+      <div className='container-project-home text-center'>
+          <h5
+            className='text-white m-2'
+          >
+            Puedes echar un vistazo a mis proyectos y<span className='text-warning'>/</span>o ponerte en contacto con migo  en <span className="text-warning"> :</span>
+          </h5>
+          <div className='d-flex'>
+            <Button
+              className='css-button-gradient--5 fw-bold mb-2'
+              onClick={handleGoToprojects}
+            >
+              Ir a Proyectos
+            </Button>
+            <Button
+              className='css-button-gradient--5 fw-bold mb-2 mx-3'
+              onClick={handleGoToContact}
+            >
+              Ir a Contacto
+            </Button>
+          </div>
+        </div>
+        </div>
 
       <div className="col-md-6">
         <h4 className="title-skill fw-bold my-4 text-white"> Skills<span className="text-warning"> :</span></h4>

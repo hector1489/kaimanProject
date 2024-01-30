@@ -1,7 +1,9 @@
 import { useContext } from "react"
 import { Card, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import DataContext from "../context/Datacontext"
+import DataContext from "../../context/Datacontext"
+import "./Cards.css"
+
 
 const Cards = () => {
   const { data } = useContext(DataContext)

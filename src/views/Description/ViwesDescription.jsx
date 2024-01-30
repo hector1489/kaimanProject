@@ -1,4 +1,4 @@
-import Description from "../components/Description"
+import { Description } from "../../components/index.jsx"
 
 const ViewsDescription = () => {
     return (

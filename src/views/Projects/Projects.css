@@ -1,0 +1,16 @@
+.container-projects {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.container-projects h2 {
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    backdrop-filter: blur(20px);
+    border: 1px solid #2196F3;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 10px;
+}

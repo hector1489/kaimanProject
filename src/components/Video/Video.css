@@ -1,0 +1,13 @@
+.container-videos {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2196F3;
+    border-radius: 10px;
+}
+
+.button-links-video {
+    gap: 10px;
+}
