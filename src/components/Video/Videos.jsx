@@ -32,8 +32,7 @@ const Videos = () => {
             <p className='text-center text-warning p-2'>
               Mi dedicación al perfeccionamiento de mis habilidades informáticas,
               me ha permitido desarrollar la capacidad de crear un solido e-commerce para mi proyecto final en Desafios Latam.
-              En este puse a prueba mi adaptabilidad cambiando de javaSript a typeScript en las ultimas dos semanas.
-              Tiene como objetivo principal guardar la informacion de los usuarios de forma segura y obtener los datos de sus
+              Este tiene como objetivo principal guardar la informacion de los usuarios de forma segura y obtener los datos de sus
               productos favoritos del catologo puedes visitar la web y revisar la documentación en los siguientes enlaces :
             </p>
             <div className='button-links-video d-flex flex-column justify-content-center align-items-center p-2'>
