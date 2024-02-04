@@ -9,7 +9,7 @@ const Browser = () => {
 
   const setActiveClass = ({ isActive }) => {
     return isActive
-      ? "text-warning text-decoration-none me-3"
+      ? "text-warning text-decoration-none me-3 fw-bold"
       : "text-secondary text-decoration-none me-3"
   }
 
