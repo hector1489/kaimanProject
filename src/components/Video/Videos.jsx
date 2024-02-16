@@ -29,9 +29,8 @@ const Videos = () => {
         </div>
         <div className=' col-md-6'>
           <div className='container-parrafo-video d-flex flex-column justify-content-center'>
-            <p className='text-center text-warning p-2'>
-              Mi dedicación al perfeccionamiento de mis habilidades informáticas,
-              me ha permitido desarrollar la capacidad de crear un solido e-commerce para mi proyecto final en Desafios Latam.
+            <p className='text-center text-warning p-2 mt-2'>
+              Mi dedicación me ha permitido desarrollar la capacidad de crear un solido e-commerce para mi proyecto final en Desafios Latam.
               Este tiene como objetivo principal guardar la informacion de los usuarios de forma segura y obtener los datos de sus
               productos favoritos del catologo puedes visitar la web y revisar la documentación en los siguientes enlaces :
             </p>

@@ -59,18 +59,18 @@ const Description = () => {
         <h4 className="title-skill fw-bold my-4 text-white"> Skills<span className="text-warning"> :</span></h4>
         <div className="container">
           <div className="row justify-content-center">
-            <Skill iconClass="fab fa-html5 fa-2x mb-3" title="HTML" />
-            <Skill iconClass="fab fa-css3-alt fa-2x mb-3" title="CSS" />
-            <Skill iconClass="fab fa-bootstrap fa-2x mb-3" title="Bootstrap" />
-            <Skill iconClass="fab fa-git-alt fa-2x mb-3" title="Git" />
-            <Skill iconClass="fab fa-github fa-2x mb-3" title="GitHub" />
-            <Skill iconClass="fas fa-cloud fa-2x mb-3" title="Cloud Computing" />
-            <Skill iconClass="fab fa-sass fa-2x mb-3" title="Sass" />
-            <Skill iconClass="fab fa-js fa-2x mb-3" title="JavaScript" />
-            <Skill iconClass="fab fa-react fa-2x mb-3" title="React" />
-            <Skill iconClass="fab fa-node fa-2x mb-3" title="Node.js" />
-            <Skill iconClass="fas fa-database fa-2x mb-3" title="PostgreSQL" />
-            <Skill iconClass="fas fa-key fa-2x mb-3" title="JWT" />
+            <Skill iconClass="fab fa-html5 fa-2x text-warning mb-3" title="HTML" />
+            <Skill iconClass="fab fa-css3-alt fa-2x mb-3 text-warning" title="CSS" />
+            <Skill iconClass="fab fa-bootstrap fa-2x mb-3 text-warning" title="Bootstrap" />
+            <Skill iconClass="fab fa-git-alt fa-2x mb-3 text-warning" title="Git" />
+            <Skill iconClass="fab fa-github fa-2x mb-3 text-warning" title="GitHub" />
+            <Skill iconClass="fas fa-cloud fa-2x mb-3 text-warning" title="Cloud Computing" />
+            <Skill iconClass="fab fa-sass fa-2x mb-3 text-warning" title="Sass" />
+            <Skill iconClass="fab fa-js fa-2x mb-3 text-warning" title="JavaScript" />
+            <Skill iconClass="fab fa-react fa-2x mb-3 text-warning" title="React" />
+            <Skill iconClass="fab fa-node fa-2x mb-3 text-warning" title="Node.js" />
+            <Skill iconClass="fas fa-database fa-2x mb-3 text-warning" title="PostgreSQL" />
+            <Skill iconClass="fas fa-key fa-2x mb-3 text-warning" title="JWT" />
           </div>
         </div>
       </div>
