@@ -32,7 +32,7 @@ const Description = () => {
         </a>
       </div>
 
-      <div className='container-project-home text-center'>
+      <div className='container-project-home text-center mt-5'>
           <h5
             className='text-white m-2'
           >

@@ -10,12 +10,7 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(/src/assets/img/bg8.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #151530, #1a1a1d);
     margin-top: 56px;
 }
 
@@ -25,16 +20,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #aa781c;
+    background-color: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color:  #004e92;
+    background-color: #333;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color:  #073c69 ;
+    background-color: #555;
 }
 
 /*animaciones*/
