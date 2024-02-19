@@ -24,8 +24,8 @@ const Description = () => {
           <p className="text-white">
             Agradezco tu visita a mi portafolio aquí podrás explorar
             las tecnologías con las que he trabajado y conocer mis  proyectos.
-            Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
-            clic en el botón <span className="text-color-uno">"Descargar CV"</span>.
+            Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno fw-bold">CV</span> haciendo
+            clic en el botón <span className="text-color-uno fw-bold">"Descargar CV"</span>.
           </p>
           <a href={cvFilePath} download="Hector_Gonzalez_CV.pdf">
             <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
@@ -33,11 +33,11 @@ const Description = () => {
         </div>
 
         <div className='container-project-home text-center mt-5'>
-          <h5
+          <p
             className='text-white m-2'
           >
-            Además puedes ver mis proyectos en detalle y<span className='text-warning'>/</span>o ponerte en contacto con migo  en <span className="text-warning"> :</span>
-          </h5>
+            Además puedes ver mis proyectos en detalle y<span className='text-warning fw-bold'>/</span>o ponerte en contacto con migo  en <span className="text-warning fw-bold"> :</span>
+          </p>
           <div className='d-flex'>
             <Button
               className='css-button-gradient--5 fw-bold mb-2'

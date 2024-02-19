@@ -11,18 +11,18 @@ const Intro = () => {
           </h1>
         </div>
 
-        <div className="p-2 fw-bold">
+        <div className="p-2">
           <h3>Héctor González P <span className="text-warning">.</span></h3>
         </div>
       </div>
 
       <div className="d-flex flex-column flex-md-row mt-3">
-        <div className="container-project-home text-center fw-bold p-2">
+        <div className="container-project-home text-center p-2">
           <p className='text-white'>
-          <span className='text-warning'>¡Hola!</span> Soy un apasionado desarrollador web Full Stack JavaScript.
+          <span className='text-warning fw-bold'>¡Hola!</span> Soy un apasionado desarrollador web Full Stack JavaScript.
             Mi experiencia previa se ha centrado en el sector de la salud, colaborando durante 14 años como; técnico en enfermería,
             rescatista y despachador de rescates a nivel nacional.
-            Además, he participado en proyectos freelance con la agrupación <span className='text-warning'>"Amigos del Puangue"</span>,
+            Además, he participado en proyectos freelance con la agrupación <span className='text-warning fw-bold'>"Amigos del Puangue"</span>,
             desempeñándome como desarollador backend y director.
           </p>
         </div>
