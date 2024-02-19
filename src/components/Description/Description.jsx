@@ -20,23 +20,23 @@ const Description = () => {
   return (
     <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1">
       <div className="d-flex flex-column gap-4">
-      <div className="d-flex flex-column text-center text-md-left">
-        <p className="container-p my-4 text-white">
-          Agradezco tu visita a mi portafolio aquí podrás explorar
-          las tecnologías con las que he trabajado y conocer mis  proyectos.
-          Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
-          clic en el botón <span className="text-color-uno">"Descargar CV"</span>.
-        </p>
-        <a href={cvFilePath} download="Hector_Gonzalez_CV.pdf">
-          <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
-        </a>
-      </div>
+        <div className="container-p d-flex flex-column text-center text-md-left mt-4">
+          <p className="text-white">
+            Agradezco tu visita a mi portafolio aquí podrás explorar
+            las tecnologías con las que he trabajado y conocer mis  proyectos.
+            Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno">CV</span> haciendo
+            clic en el botón <span className="text-color-uno">"Descargar CV"</span>.
+          </p>
+          <a href={cvFilePath} download="Hector_Gonzalez_CV.pdf">
+            <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
+          </a>
+        </div>
 
-      <div className='container-project-home text-center mt-5'>
+        <div className='container-project-home text-center mt-5'>
           <h5
             className='text-white m-2'
           >
-            Además puedes echar un vistazo a mis proyectos y<span className='text-warning'>/</span>o ponerte en contacto con migo  en <span className="text-warning"> :</span>
+            Además puedes ver mis proyectos en detalle y<span className='text-warning'>/</span>o ponerte en contacto con migo  en <span className="text-warning"> :</span>
           </h5>
           <div className='d-flex'>
             <Button
@@ -53,7 +53,7 @@ const Description = () => {
             </Button>
           </div>
         </div>
-        </div>
+      </div>
 
       <div className="col-md-6">
         <h4 className="title-skill fw-bold my-4 text-white"> Skills<span className="text-warning"> :</span></h4>

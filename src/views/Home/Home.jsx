@@ -1,5 +1,5 @@
 
-import { Intro, Description, Video, Footer, } from '../../components/index.jsx'
+import { Intro, Description, Video, Footer, MainGallery, } from '../../components/index.jsx'
 import './Home.css'
 
 const Home = () => {
@@ -11,7 +11,11 @@ const Home = () => {
         <Intro />
       </div>
 
-      <div className="m-2">
+      <div className="mt-2 p-2">
+        <MainGallery />
+      </div>
+
+      <div className="mt-5">
         <Video />
       </div>
 

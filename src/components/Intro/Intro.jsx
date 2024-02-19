@@ -19,7 +19,7 @@ const Intro = () => {
       <div className="d-flex flex-column flex-md-row mt-3">
         <div className="container-project-home text-center fw-bold p-2">
           <p className='text-white'>
-          <span className='text-warning'>¡Hola!</span> Soy un apasionado desarrollador web Full Stack especializado en JavaScript.
+          <span className='text-warning'>¡Hola!</span> Soy un apasionado desarrollador web Full Stack JavaScript.
             Mi experiencia previa se ha centrado en el sector de la salud, colaborando durante 14 años como; técnico en enfermería,
             rescatista y despachador de rescates a nivel nacional.
             Además, he participado en proyectos freelance con la agrupación <span className='text-warning'>"Amigos del Puangue"</span>,
