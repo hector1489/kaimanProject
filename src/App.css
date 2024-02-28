@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, #151530, #1a1a1d);
     margin-top: 56px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*ScrollBar*/
