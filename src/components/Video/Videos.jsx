@@ -35,9 +35,6 @@ const Videos = () => {
               productos favoritos del catologo puedes visitar la web y revisar la documentación en los siguientes enlaces :
             </p>
             <div className='button-links-video d-flex flex-column justify-content-center align-items-center p-2'>
-              <a className='btn css-button-gradient--5 text-color-uno' href='https://frontend-svc7.onrender.com/' target='_blank' rel='noopener noreferrer'>
-                Web
-              </a>
               <a className='btn css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/IT-Dojo' target='_blank' rel='noopener noreferrer'>
                 Documentación
               </a>
