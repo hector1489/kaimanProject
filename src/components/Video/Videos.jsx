@@ -32,7 +32,7 @@ const Videos = () => {
             <p className='text-center text-warning p-2 mt-2'>
               Mi dedicación me ha permitido desarrollar la capacidad de crear un solido e-commerce para mi proyecto final en Desafios Latam.
               Este tiene como objetivo principal guardar la informacion de los usuarios de forma segura y obtener los datos de sus
-              productos favoritos del catologo puedes visitar la web y revisar la documentación en los siguientes enlaces :
+              productos favoritos del catologo, puedes visitar la documentación en el siguiente enlace :
             </p>
             <div className='button-links-video d-flex flex-column justify-content-center align-items-center p-2'>
               <a className='btn css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/IT-Dojo' target='_blank' rel='noopener noreferrer'>
