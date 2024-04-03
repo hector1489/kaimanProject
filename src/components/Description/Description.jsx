@@ -1,4 +1,4 @@
-import cv from "../../assets/CV/HéctorGonzálezCVDesarrolladorWeb.pdf"
+import cv from "../../assets/CV/CV_HectorGonzalez.pdf"
 import './Description.css'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
