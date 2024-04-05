@@ -1,0 +1,33 @@
+{
+    "title": "Items Gallery",
+    "Items": [
+      {
+        "id": 1,
+        "name": "React + Tailwind",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/registroSocios.png",
+        "description": "Ecommerce lijero con react, tailwind y daisy UI.",
+        "url": "https://github.com/hector1489/React_Tailwind"
+      },
+      {
+        "id": 2,
+        "name": "PyJ Creaciones",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/PyJ.png",
+        "description": "Este proyecto en React + Vite destaca mi capacidad para crear aplicaciones web dinámicas y eficientes para un cliente Pyme.",
+        "url": "https://github.com/hector1489/PyJ_Creaciones"
+      },
+      {
+        "id": 3,
+        "name": "Registro de Colaboradores",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/colaboradores.png",
+        "description": "Planilla base para el registro de colaboradores, destacando mi capacidad para estructurar y gestionar datos de manera eficiente.",
+        "url": "https://github.com/hector1489/BaseColaboradores"
+      },
+      {
+        "id": 4,
+        "name": "Poke Lite",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Poke_Lite2.png",
+        "description": "Con tema del equipo Rocket. Esta aplicacion es una versión ligera del proyecto Poke.Dex",
+        "url": "https://github.com/hector1489/PokeLite"
+      }
+    ]
+  }

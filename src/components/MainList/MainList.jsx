@@ -2,12 +2,11 @@ import { useContext } from "react"
 import { Card, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import DataContext from "../../context/Datacontext"
-import "./Cards.css"
 
 
-const Cards = () => {
+const MainList = () => {
   const { data } = useContext(DataContext)
-  const sliceData = data.slice(0, 15)
+  const sliceData = data.slice(15, 16)
 
   return (
     <>
@@ -29,5 +28,5 @@ const Cards = () => {
   )
 }
 
-export default Cards
+export default MainList
 

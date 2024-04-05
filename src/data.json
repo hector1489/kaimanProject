@@ -105,6 +105,13 @@
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/cuppon.png",
         "description": "Cuppon es un documento HTML enriquecido con implementación de CSS y Bootstrap.",
         "url": "https://github.com/hector1489/cuppon"
+      },
+      {
+        "id": 16,
+        "name": "React + Tailwind",
+        "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/registroSocios.png",
+        "description": "Ecommerce lijero con react, tailwind y daisy UI.",
+        "url": "https://github.com/hector1489/React_Tailwind"
       }
     ]
   }
