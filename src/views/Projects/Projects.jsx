@@ -3,6 +3,7 @@ import './Projects.css'
 
 const Projects = () => {
   return (
+
     <div className="container-projects p-4">
       <h2 className="f-bold text-white text-center text-uppercase">
         Proyectos
@@ -11,6 +12,7 @@ const Projects = () => {
         <Cards />
       </div>
     </div>
+
   )
 }
 
