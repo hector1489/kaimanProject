@@ -6,7 +6,7 @@ import DataContext from "../../context/Datacontext"
 
 const MainList = () => {
   const { data } = useContext(DataContext)
-  const sliceData = data.slice(15, 16)
+  const sliceData = data.slice(14, 16)
 
   return (
     <>

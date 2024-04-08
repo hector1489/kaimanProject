@@ -7,7 +7,7 @@ import "./Cards.css"
 
 const Cards = () => {
   const { data } = useContext(DataContext)
-  const sliceData = data.slice(0, 15)
+  const sliceData = data.slice(0, 14)
 
   return (
     <>
