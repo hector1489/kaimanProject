@@ -20,8 +20,8 @@ const Description = () => {
   return (
     <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1">
       <div className="d-flex flex-column gap-4">
-        <div className="container-p d-flex flex-column text-center text-md-left mt-4">
-          <p className="text-white">
+        <div className="container-p d-flex flex-column text-center text-md-left mt-4 p-2">
+          <p className="text-white ">
             Agradezco tu visita a mi portafolio aquí podrás explorar
             las tecnologías con las que he trabajado y conocer mis  proyectos.
             Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno fw-bold">CV</span> haciendo
@@ -32,7 +32,7 @@ const Description = () => {
           </a>
         </div>
 
-        <div className='container-project-home text-center mt-5'>
+        <div className='container-project-home text-center mt-5 '>
           <p
             className='text-white m-2'
           >
@@ -56,7 +56,7 @@ const Description = () => {
       </div>
 
       <div className="col-md-6">
-        <h4 className="title-skill fw-bold my-4 text-white"> Skills<span className="text-warning"> :</span></h4>
+        <h4 className="title-skill fw-bold my-4 text-white "> Skills<span className="text-warning"> :</span></h4>
         <div className="container">
           <div className="row justify-content-center">
             <Skill iconClass="fab fa-html5 fa-2x text-warning mb-3" title="HTML" />

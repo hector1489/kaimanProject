@@ -2,12 +2,11 @@
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     gap: 100px;
 }
 
 .container-p {
-    padding: 10px;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     border: 1px solid #2196F3;
     margin: 0 auto;
@@ -57,7 +56,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
     box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
     backdrop-filter: blur(20px);
     background: rgba(0, 0, 0, 0.3);
@@ -65,5 +63,5 @@
     margin: 0 auto;
     max-width: 500px;
     border-radius: 10px;
-    gap: 20px;
+    gap: 10px;
 }
