@@ -18,25 +18,13 @@ const MainGallery = () => {
   }
 
   return (
-    <div className="main-gallery d-flex flex-column flex-md-row m-4">
+    <div className="main-gallery d-flex flex-column flex-md-row m-4 gap-2">
       <div className="text-center text-white m-2">
         <h3>Puedes dar un vistazo rapido a mis proyectos <span className="text-warning"> :</span></h3>
         <p>o ver en detalle <Link to="/projects" className="fw-bold">aquí</Link></p>
       </div>
       <div className="m-2">
         <div id="carouselExampleCaptions" className="carousel carousel-dark slide">
-          <div className="carousel-indicators">
-            {data.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to={index}
-                className={index === activeIndex ? "active" : ""}
-                aria-label={`Slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
           <div className="carousel-inner">
             {data.map((item, index) => (
               <div key={index} className={`carousel-item ${index === activeIndex ? "active" : ""}`}>
