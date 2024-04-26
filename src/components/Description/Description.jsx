@@ -25,7 +25,7 @@ const Description = () => {
             Agradezco tu visita a mi portafolio aquí podrás explorar
             las tecnologías con las que he trabajado y conocer mis  proyectos.
             Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-color-uno fw-bold">CV</span> haciendo
-            clic en el botón <span className="text-color-uno fw-bold">"Descargar CV"</span>.
+            clic en el botón <span className="text-color-uno fw-bold">"Descargar CV"</span> <span className="text-warning">.</span>
           </p>
           <a href={cvFilePath} download="Hector_Gonzalez_CV.pdf">
             <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
