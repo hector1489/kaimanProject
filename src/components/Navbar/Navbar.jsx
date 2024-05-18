@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import lofi from "../../assets/lofi.mp3"
+import lofi from "../../assets/audio/lofi.mp3"
 import './Navbar.css'
 
 const Browser = () => {
@@ -37,7 +37,8 @@ const Browser = () => {
               <i className={`fa-solid fa-user-astronaut fa-spin fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
             </button>
           </div>
-          <audio id="audioPlayer" src={ lofi }></audio>
+          <audio id="audioPlayer" src={lofi} loop>
+          </audio>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="burguer-button" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -51,7 +52,7 @@ const Browser = () => {
             <NavLink to="/projects" className={setActiveClass}>
               Proyectos
             </NavLink>
-            <NavLink to="/Contacts" className={setActiveClass}>
+            <NavLink to="/contacts" className={setActiveClass}>
               Contacto
             </NavLink>
           </Nav>
