@@ -4,6 +4,7 @@ import { Navbar } from './components/index.jsx'
 import '../src/App.css'
 import { Home, NotFound, Projects, Contacts, Description } from './views/index.jsx'
 import DataContext from "./context/Datacontext"
+import Cursor from "./components/Cursor/Cursor.jsx"
 import dataJson from "./data.json"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <DataContext.Provider value={globalState}>
+      <Cursor />
       <BrowserRouter>
         <Navbar />
         <Routes>
