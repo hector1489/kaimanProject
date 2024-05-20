@@ -1,4 +1,3 @@
-// src/components/Cursor.js
 import { useEffect } from 'react'
 import './Cursor.css'
 
