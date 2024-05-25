@@ -18,7 +18,7 @@ const Description = () => {
   }
 
   return (
-    <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center p-1">
+    <div id="About-me" className="container-description d-flex flex-column flex-md-row justify-content-center">
       <div className="d-flex flex-column gap-4">
         <div className="container-p d-flex flex-column text-center text-md-left mt-4 p-2">
           <p className="text-white ">
