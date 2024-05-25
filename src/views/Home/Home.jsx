@@ -6,7 +6,7 @@ const Home = () => {
 
 
   return (
-    <>
+    <div className='container-Home'>
       <div className="p-2">
         <Intro />
       </div>
@@ -31,7 +31,7 @@ const Home = () => {
       <div className="mt-2">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
