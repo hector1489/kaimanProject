@@ -22,8 +22,6 @@ const Description = () => {
       <div className="d-flex flex-column gap-4">
         <div className="container-p d-flex flex-column text-center text-md-left mt-4 p-2">
           <p className="text-white ">
-            Agradezco tu visita a mi portafolio aquí podrás explorar
-            las tecnologías con las que he trabajado y conocer mis  proyectos.
             Si deseas obtener más información sobre mi trayectoria, puedes descargar mi <span className="text-info fw-bold">CV</span> haciendo
             clic en el botón <span className="text-info fw-bold">"Descargar CV"</span> <span className="text-warning">.</span>
           </p>
