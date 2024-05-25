@@ -28,12 +28,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333;
+    background-color: #00ffff;
     border-radius: 6px;
+    box-shadow: 0 0 10px  #00ffff, 0 0 20px  #00ffff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
 
 /*animaciones*/
