@@ -14,7 +14,7 @@ const Projects = () => {
     </div>
     <div className="container-projects p-4">
       <h3 className="f-bold text-white text-center">
-        Plantillas para la comunidad dev <span className="text-warning fw-bold"> : </span>
+        Plantillas para la comunidad <span className="text-info">dev</span> <span className="text-warning fw-bold"> : </span>
       </h3>
       <div className="d-flex flex-wrap justify-content-around p-4 animated-text-dos">
         <MainList />
