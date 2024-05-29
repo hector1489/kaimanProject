@@ -29,7 +29,6 @@
   border: 10px solid #2196F3;
 }
 
-/* Media queries */
 @media (min-width: 768px) {
   .section-intro {
     flex-direction: row;

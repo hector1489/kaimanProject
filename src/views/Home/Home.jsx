@@ -6,6 +6,7 @@ const Home = () => {
 
 
   return (
+    <>
     <div className='container-Home'>
       <div className="p-2">
         <Intro />
@@ -28,10 +29,11 @@ const Home = () => {
           <i className="fa-solid fa-angle-up fa-flip fa-2xl"></i>
         </a>
       </ div>
-      <div className="mt-2">
-        <Footer />
-      </div>
     </div>
+    <div className="mt-2">
+    <Footer />
+  </div>
+  </>
   );
 }
 
