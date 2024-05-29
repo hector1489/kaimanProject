@@ -2,9 +2,9 @@ import './Intro.css'
 
 const Intro = () => {
   return (
-    <div className="container-intro">
+    <section className="section-intro">
       <div className="d-flex flex-column justify-content-center gap-4">
-        <div className="container-intro-text text-center">
+        <div className="section-intro-text text-center">
           <div className="p-2">
             <h1 className="fw-bold text-center">
               "Desarrollador web <span className="text-info">fullStack</span><span className="text-warning">.</span>"
@@ -31,7 +31,7 @@ const Intro = () => {
       <div className="d-flex justify-content-center align-items-center">
         <img className="rounded-image" src="https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/foto2.jpg" alt="foto2" />
       </div>
-    </div>
+    </section>
   )
 }
 

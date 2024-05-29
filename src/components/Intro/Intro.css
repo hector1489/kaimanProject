@@ -1,4 +1,4 @@
-.container-intro {
+.section-intro {
   width: 100%;
   height: auto;
   display: flex;
@@ -9,7 +9,7 @@
   gap: 80px;
 }
 
-.container-intro-text {
+.section-intro-text {
   backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -31,13 +31,13 @@
 
 /* Media queries */
 @media (min-width: 768px) {
-  .container-intro {
+  .section-intro {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  .container-intro-text {
+  .section-intro-text {
     margin-right: 20px;
   }
 }
