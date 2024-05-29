@@ -1,74 +1,69 @@
 
 .card {
-    width: 300px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 1px solid #2196F3;
-}
-
-.card:hover {
-    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
-    transform: translateY(-5px);
+  max-width: 400px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #2196F3;
 }
 
 .card-body {
-    background-color: #333;
-    padding: 15px;
-    transition: transform 0.3s ease-in-out;
+  background-color: #333;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card:hover .card-body {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 8px;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
 }
 
 .card-button {
-    background-color: #2196F3;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .css-button-gradient--5 {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-size: 120% auto;
-    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
 }
 
 .css-button-gradient--5:hover {
-    background-position: right center;
+  background-position: right center;
 }
 
 .css-button-gradient--5:active {
-    top: 2px;
+  top: 2px;
 }

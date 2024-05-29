@@ -1,4 +1,4 @@
-import { Cards, MainList } from "../../components/index.jsx"
+import { GalleryProject, MainList } from "../../components/index.jsx"
 import './Projects.css'
 
 const Projects = () => {
@@ -9,7 +9,7 @@ const Projects = () => {
         Proyectos
       </h2>
       <div className="d-flex flex-wrap justify-content-around p-4 animated-text-dos">
-        <Cards />
+        <GalleryProject />
       </div>
     </div>
     <div className="container-projects p-4">
