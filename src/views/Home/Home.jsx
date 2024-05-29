@@ -7,21 +7,23 @@ const Home = () => {
 
   return (
     <>
-    <div className='container-Home'>
-      <div className="p-2">
-        <Intro />
-      </div>
+      <div className='container-Home'>
+        <div className="p-2">
+          <Intro />
+        </div>
 
-      <div className="mt-2 p-2">
-        <MainGallery />
-      </div>
+        <div className="mt-2">
+          <MainGallery />
+        </div>
 
-      <div className="mt-5">
-        <Video />
-      </div>
+        <div className="mt-5">
+          <Video />
+        </div>
 
-      <div className="m-4">
-        <Description />
+        <div className="mt-5 p-2">
+          <Description />
+        </div>
+
       </div>
 
       <div className="container-arrow d-flex mt-4">
@@ -29,11 +31,11 @@ const Home = () => {
           <i className="fa-solid fa-angle-up fa-flip fa-2xl"></i>
         </a>
       </ div>
-    </div>
-    <div className="mt-2">
-    <Footer />
-  </div>
-  </>
+
+      <div className="mt-2">
+        <Footer />
+      </div>
+    </>
   );
 }
 
