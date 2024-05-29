@@ -27,7 +27,7 @@ const MainGallery = () => {
         <div id="carouselExampleCaptions" className="carousel carousel-dark slide">
           <div className="carousel-inner">
             {data.map((item, index) => (
-              <div key={index} className={`carousel-item ${index === activeIndex ? "active" : ""}`}>
+              <div key={item.id} className={`carousel-item ${index === activeIndex ? "active" : ""}`}>
                 <img src={item.image} className="d-block w-100" alt={item.alt} />
                 <div className="carousel-caption d-none d-md-block text-white fw-bold p-2">
                   <h5>{item.title}</h5>
