@@ -36,15 +36,15 @@ const Description = () => {
           >
             Además puedes ver mis proyectos en detalle y<span className='text-warning fw-bold'>/</span>o ponerte en contacto con migo  en <span className="text-warning fw-bold"> :</span>
           </p>
-          <div className='d-flex'>
+          <div className='d-flex flex-wrap gap-3 m-2'>
             <Button
-              className='css-button-gradient--5 fw-bold mb-2'
+              className='css-button-gradient--5 fw-bold'
               onClick={handleGoToprojects}
             >
               Ir a Proyectos
             </Button>
             <Button
-              className='css-button-gradient--5 fw-bold mb-2 mx-3'
+              className='css-button-gradient--5 fw-bold'
               onClick={handleGoToContact}
             >
               Ir a Contacto
