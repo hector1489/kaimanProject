@@ -41,13 +41,13 @@ const Description = () => {
               className='css-button-gradient--5 fw-bold'
               onClick={handleGoToprojects}
             >
-              Ir a Proyectos
+              Proyectos
             </Button>
             <Button
               className='css-button-gradient--5 fw-bold'
               onClick={handleGoToContact}
             >
-              Ir a Contacto
+              Contacto
             </Button>
           </div>
         </div>
