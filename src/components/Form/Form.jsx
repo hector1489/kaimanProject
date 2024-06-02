@@ -65,7 +65,7 @@ const Contacto = () => {
               <a className="social-icon pe-2" href="https://github.com/hector1489" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
-              <a className="social-icon ps-2" href="https://www.linkedin.com/in/hector-gonzalez-6ab633256/" target="_blank" rel="noopener noreferrer">
+              <a className="social-icon p-2" href="https://www.linkedin.com/in/hector-gonzalez-6ab633256/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i>
               </a>
               <a className="social-icon ps-2" href="https://www.instagram.com/r3ptar.dev/" target="_blank" rel="noopener noreferrer">
