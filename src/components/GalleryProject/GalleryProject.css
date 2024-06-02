@@ -9,7 +9,7 @@
     background: linear-gradient( #0000 0%, #ffffff1a 100%)
 }
 
-::-webkit-scrollbar {
+.gallery-project::-webkit-scrollbar {
     display: none;
 }
 
