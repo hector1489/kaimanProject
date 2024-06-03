@@ -1,4 +1,5 @@
 import { Form } from "../../components/index.jsx"
+import './Contacts.css'
 
 const Contacts = () => {
     return (

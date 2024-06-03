@@ -56,9 +56,9 @@ const Contacto = () => {
         <Button className="btn css-button-gradient--5 fw-bold" type="submit">
         Enviar
       </Button>
-        <ul className="text-white text-decoration-none">
-          <li className="my-3"><span className="fw-bold me-3 text-warning">Mail :</span> g.p.hector.alejandro@gmail.com</li>
-        </ul>
+        <div className="text-white text-decoration-none text-center">
+          <p className="my-3"><span className="fw-bold me-3 text-warning">Mail :</span> g.p.hector.alejandro@gmail.com</p>
+        </div>
         <div className="container-icon">
           <div className="col-12">
             <div className="fa-3x text-center color-dark">
