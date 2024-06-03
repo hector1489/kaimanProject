@@ -3,12 +3,8 @@
 .carousel {
     max-width: 50rem;
     max-height: auto;
-    border: 1px solid #2196F3;
-    border-radius: 10px;
-}
-
-.carousel img {
-    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(#0000 0%, #ffffff1a 100%);
 }
 
 .carousel-caption {
