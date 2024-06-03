@@ -5,7 +5,7 @@
         "id": 1,
         "name": "Registro de socios",
         "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/registroSocios.png",
-        "description": "Base de datos que tiene como objetivo principal almacenar información sobre los socios de una agrupación.",
+        "description": "Base de datos que tiene como objetivo principal almacenar información sobre los colaboradores.",
         "url": "https://github.com/hector1489/registroDeSocios"
       },
       {
