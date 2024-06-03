@@ -9,12 +9,9 @@
 }
 
 .custom-video {
-    border: 1px solid #2196F3;
-    border-radius: 10px;
-}
 
-.custom-video video {
-    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient( #0000 0%, #ffffff1a 100%)
 }
 
 .css-button-gradient--5 {
