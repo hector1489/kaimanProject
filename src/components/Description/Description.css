@@ -6,7 +6,7 @@
 }
 
 .container-p {
-    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    box-shadow: 3px 3px 20px rgba(199, 189, 189, 0.973);
     border: 1px solid #2196F3;
     margin: 0 auto;
     max-width: 500px;
@@ -15,37 +15,13 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-.css-button-gradient--5 {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-size: 120% auto;
-    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
-}
-
-.css-button-gradient--5:hover {
-    background-position: right center;
-}
-
-.css-button-gradient--5:active {
-    top: 2px;
-}
 
 .title-skill {
     backdrop-filter: blur(20px);
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid #2196F3;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    box-shadow: 3px 3px 20px rgba(199, 189, 189, 0.973);
 }
 
 .container-project-home {
@@ -55,7 +31,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    box-shadow: 3px 3px 20px rgba(199, 189, 189, 0.973);
     backdrop-filter: blur(20px);
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid #2196F3;
