@@ -1,6 +1,6 @@
 .gallery-project {
     width: 50rem;
-    max-height: 420px;
+    max-height: 430px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,10 @@
 
 .gallery-project::-webkit-scrollbar {
     display: none;
+}
+
+.gallery-project > i {
+    transform: translate(230px, 50px);
 }
 
 @keyframes show {
