@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react'
 import video from '../../assets/video/itDojo-1.mp4'
 import video2 from '../../assets/video/ADP.mp4'
 import '../Video/Video.css'
+import { Button } from 'react-bootstrap'
 
 const Videos = () => {
   const videoRef = useRef(null)
@@ -40,9 +41,9 @@ const Videos = () => {
               </p>
               <div className='button-links-video d-flex flex-column justify-content-center align-items-center p-2'>
                 <p className='text-center text-warning'>Con el espíritu de transparencia de la agrupación, puedes visitar su GitHub</p>
-                <a className='btn css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/ADP-Dos?tab=readme-ov-file' target='_blank' rel='noopener noreferrer'>
+                <Button className='btn css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/ADP-Dos?tab=readme-ov-file' target='_blank' rel='noopener noreferrer'>
                   Documentación
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -65,9 +66,9 @@ const Videos = () => {
                 productos favoritos del catologo, puedes visitar la documentación en el siguiente enlace :
               </p>
               <div className='button-links-video d-flex flex-column justify-content-center align-items-center p-2'>
-                <a className='btn css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/IT-Dojo' target='_blank' rel='noopener noreferrer'>
+                <Button className='css-button-gradient--5 text-color-uno' href='https://github.com/hector1489/IT-Dojo' target='_blank' rel='noopener noreferrer'>
                   Documentación
-                </a>
+                </Button>
               </div>
             </div>
           </div>
