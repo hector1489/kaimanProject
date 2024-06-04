@@ -1,42 +1,47 @@
 .gallery-project {
-    width: 50rem;
-    max-height: 430px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background: linear-gradient( #0000 0%, #ffffff1a 100%)
+  width: 50rem;
+  max-height: 430px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(#0000 0%, #ffffff1a 100%)
 }
 
 .gallery-project::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.gallery-project > i {
-    transform: translate(230px, 50px);
+.gallery-project>i {
+  transform: translate(230px, 50px);
+}
+
+@media (max-width: 768px) {
+  .gallery-project>i {
+    transform: translate(0);
+  }
 }
 
 @keyframes show {
-    from {
-        opacity: 0;
-        scale: 25%;
-    }
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
 
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 .card {
-    view-timeline-name: --card;
-    view-timeline-axis: block;
+  view-timeline-name: --card;
+  view-timeline-axis: block;
 
-    animation-timeline: --card;
-    animation-name: show;
+  animation-timeline: --card;
+  animation-name: show;
 
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
-
