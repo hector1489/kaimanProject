@@ -1,44 +1,44 @@
 .container-navbar {
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid #2196F3;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #2196F3;
 }
 
 .navbar-brand i {
-    font-size: 30px;
-    color: #2196F3;
+  font-size: 30px;
+  color: #2196F3;
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #2196F3;
+  color: #2196F3;
 }
 
 .burguer-button {
-    border: 1px solid #2196F3;
+  border: 1px solid #2196F3;
 }
 
 .button-icon-astro {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-right: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 15px;
 }
 
 .button-icon-astro>i:hover {
-    color: #1fb839;
+  color: #1fb839;
 }
 
 .navbar-icon {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
