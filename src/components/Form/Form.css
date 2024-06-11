@@ -1,59 +1,59 @@
-
 .container-form {
-    width: 100%;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {
-    width: 500px;
-    box-shadow: 3px 3px 15px rgba(199, 189, 189, 0.973);
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
+  width: 500px;
+  box-shadow: 3px 3px 15px rgba(199, 189, 189, 0.973);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .container-icon {
-    margin: 50px;
+  margin: 50px;
 }
 
 .social-icon {
-    color: rgb(48, 120, 245);
-    transition: color 0.2s;
-    text-decoration: none;
+  color: rgb(48, 120, 245);
+  transition: color 0.2s;
+  text-decoration: none;
 }
 
 .social-icon:hover {
-    color: #1fb839;
+  color: #1fb839;
 }
 
 li {
-    margin: 10px;
-    text-align: start;
+  margin: 10px;
+  text-align: start;
 }
+
 .css-button-gradient--5 {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-size: 120% auto;
-    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
 }
 
 .css-button-gradient--5:hover {
-    background-position: right center;
+  background-position: right center;
 }
 
 .css-button-gradient--5:active {
-    top: 2px;
+  top: 2px;
 }
