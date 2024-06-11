@@ -1,17 +1,14 @@
-
-
 .carousel {
-    max-width: 50rem;
-    max-height: auto;
-    padding: 10px;
-    background: linear-gradient(#0000 0%, #ffffff1a 100%);
+  max-width: 50rem;
+  max-height: auto;
+  padding: 10px;
+  background: linear-gradient(#0000 0%, #ffffff1a 100%);
 }
 
 .carousel-caption {
-    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
-    border: 1px solid #2196F3;
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+  border: 1px solid #2196F3;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
 }
-
