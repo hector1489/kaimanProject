@@ -1,17 +1,16 @@
 .container-projects {
-    width: 100%;
-    height: auto;
-    overflow-y: auto;
-    padding-top: 10px;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  padding-top: 10px;
 }
 
 .container-projects h2 {
-    backdrop-filter: blur(20px);
-    padding: 10px;
-    box-shadow: 3px 3px 15px rgba(199, 189, 189, 0.973);
-    border: 1px solid #2196F3;
-    margin: 0 auto;
-    max-width: 500px;
-    border-radius: 10px;
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  box-shadow: 3px 3px 15px rgba(199, 189, 189, 0.973);
+  border: 1px solid #2196F3;
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: 10px;
 }
-
