@@ -20,7 +20,7 @@ const Intro = () => {
           <div className="container-project-home text-center p-2">
             <p className="text-white">
               <span className="text-warning fw-bold">¡Hola!</span> Soy un apasionado <span className="text-info fw-bold">desarrollador web Full Stack.</span> Actualmente
-              me encuentro trabajando como desarrollador web fullstack en Fungily Dev. Tambien cuento con
+              me encuentro trabajando como desarrollador web fullstack en <a href="https://www.fungilydev.cl/" target="_blank">Fungily Dev</a>. Tambien cuento con
               experiencia en trabajos freelance para la Agrupación Amigos del Puangue donde me desenvuelvo
               como director y desarrollador web.
             </p>
