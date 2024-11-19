@@ -30,18 +30,23 @@ const Browser = () => {
 
   return (
     <Navbar className="container-navbar" expand="md" fixed="top">
+
       <Container>
+
         <Navbar.Brand>
           <div className="navbar-icon text-white text-decoration-none">
             <button onClick={toggleAudio} className='button-icon-astro'>
-              <i className={`fa-solid fa-user-astronaut fa-spin fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
+              <i className={`fa-solid fa-user-astronaut fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
             </button>
           </div>
           <audio id="audioPlayer" src={lofi} loop>
           </audio>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="burguer-button" />
+
         <Navbar.Collapse id="responsive-navbar-nav">
+
           <Nav className="ms-auto">
             <NavLink to="/" className={setActiveClass}>
               Inicio
@@ -56,8 +61,11 @@ const Browser = () => {
               Contacto
             </NavLink>
           </Nav>
+
         </Navbar.Collapse>
+
       </Container>
+
     </Navbar>
   )
 }

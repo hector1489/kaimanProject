@@ -7,9 +7,10 @@ const SolarSystem = () => {
   const mountRef = useRef(null);
   const [cameraZ, setCameraZ] = useState(25);
   const [cameraRotation, setCameraRotation] = useState({ x: 0, y: 0 });
-  const [planetRotationSpeed, setPlanetRotationSpeed] = useState(0.001);  // Reduce la velocidad de rotación de los planetas
-  const [sunRotationSpeed, setSunRotationSpeed] = useState(0.00005);      // Reduce la velocidad de rotación del Sol
+  const [planetRotationSpeed, setPlanetRotationSpeed] = useState(0.001);
+  const [sunRotationSpeed, setSunRotationSpeed] = useState(0.00005);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     const width = mountRef.current.clientWidth;
