@@ -7,9 +7,9 @@ const SolarSystem = () => {
   const mountRef = useRef(null);
   const [cameraZ, setCameraZ] = useState(25);
   const [cameraRotation, setCameraRotation] = useState({ x: 0, y: 0 });
-  const [planetRotationSpeed, setPlanetRotationSpeed] = useState(0.005);
+  const [planetRotationSpeed, setPlanetRotationSpeed] = useState(0.001);  // Reduce la velocidad de rotación de los planetas
+  const [sunRotationSpeed, setSunRotationSpeed] = useState(0.00005);      // Reduce la velocidad de rotación del Sol
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     const width = mountRef.current.clientWidth;
@@ -63,22 +63,22 @@ const SolarSystem = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-    
-      // Rotar el Sol
-      sun.rotation.y += 0.0001;
-    
-      // Rotar los planetas suavemente alrededor del Sol
+
+      // Rotar el Sol lentamente
+      sun.rotation.y += sunRotationSpeed; // Ajustamos la velocidad de rotación del Sol
+
+      // Rotar los planetas lentamente alrededor del Sol
       planetMeshes.forEach(({ planet, distance, angle }) => {
-        angle += planetRotationSpeed;
+        angle += planetRotationSpeed; // Ajustamos la velocidad de rotación de los planetas
         planet.position.x = Math.cos(angle) * distance;
         planet.position.z = Math.sin(angle) * distance;
       });
-    
+
       // Actualizar la posición de la cámara
       camera.position.z = cameraZ;
       camera.rotation.x = cameraRotation.x;
       camera.rotation.y = cameraRotation.y;
-    
+
       // Renderizar la escena
       renderer.render(scene, camera);
     };
@@ -88,16 +88,15 @@ const SolarSystem = () => {
     // Manejar el scroll para acercar o alejar la cámara y rotar los planetas
     const handleScroll = (event) => {
       const delta = event.deltaY;
-      
+
       // Reducir el factor de cambio
       setCameraZ((prevCameraZ) => Math.max(10, prevCameraZ - delta * 0.02));
       setCameraRotation((prevRotation) => ({
         x: prevRotation.x + delta * 0.0005,
         y: prevRotation.y + delta * 0.0005,
       }));
-      setPlanetRotationSpeed((prevSpeed) => Math.max(0.001, Math.min(0.01, prevSpeed + delta * 0.0005))); 
+      setPlanetRotationSpeed((prevSpeed) => Math.max(0.001, Math.min(0.01, prevSpeed + delta * 0.0005)));
     };
-    
 
     // Manejar los clics para navegar a través de los enlaces
     const onMouseClick = (event) => {
@@ -126,7 +125,7 @@ const SolarSystem = () => {
         mountRef.current.removeChild(renderer.domElement);
       }
     };
-  }, [cameraZ, cameraRotation, planetRotationSpeed, navigate]);
+  }, [cameraZ, cameraRotation, planetRotationSpeed, sunRotationSpeed, navigate]);
 
   return <div ref={mountRef} style={{ width: "100%", height: "100vh" }}></div>;
 };
