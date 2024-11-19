@@ -10,8 +10,8 @@ body {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: #000428;
-  background: linear-gradient(to right, #000428, #004e92);
+  background-image: url('./assets/img/universo-blue-purple.jpg');
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
 

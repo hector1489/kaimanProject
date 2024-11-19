@@ -1,8 +1,11 @@
 import { Description } from "../../components/index.jsx"
+import "./ViewsDescription.css"
 
 const ViewsDescription = () => {
   return (
-    <Description />
+    <div className="ViewsDescription-container">
+      <Description />
+    </div>
   );
 }
 
