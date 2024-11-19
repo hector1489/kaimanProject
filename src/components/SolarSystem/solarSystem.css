@@ -1,0 +1,16 @@
+/* Asegura que el contenedor tenga el tamaño adecuado y el fondo 2D sea visible si es necesario */
+.system-solar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.system-solar-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

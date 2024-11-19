@@ -21,7 +21,6 @@ function App() {
   return (
     <DataContext.Provider value={globalState}>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/viewsdescription" element={<Description />} />
@@ -29,6 +28,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Navbar />
       </BrowserRouter>
     </DataContext.Provider>
   )

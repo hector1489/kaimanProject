@@ -1,7 +1,7 @@
 .container-navbar {
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid #2196F3;
+
 }
 
 .navbar-brand i {
