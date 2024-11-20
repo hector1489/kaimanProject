@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useNavigate } from "react-router-dom";
 import "./solarSystem.css";
-import solTexture from "../../assets/planetas/solTexture.png"; // Asegúrate de tener la ruta correcta
+import solTexture from "../../assets/planetas/solTexture.png";
+import planetaRojo from "../../assets/planetas/planetaRojo.png";
+import planetaAzul from "../../assets/planetas/planetaAzul.png";
+import planetaPurple from "../../assets/planetas/planetaPurple.png";
+import planetaVerde from "../../assets/planetas/planetaVerde.png";
 
 const SolarSystem = () => {
   const mountRef = useRef(null);
@@ -21,7 +25,7 @@ const SolarSystem = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
     mountRef.current.appendChild(renderer.domElement);
-    scene.background = null;  // Fondo transparente
+    scene.background = null;
 
     // Luz direccional para simular la luz del Sol
     const light = new THREE.DirectionalLight(0xffffff, 2);
@@ -29,27 +33,27 @@ const SolarSystem = () => {
     scene.add(light);
 
     // Luz ambiental suave
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.5); // Luz suave para detalles y sombras sutiles
+    const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
     scene.add(ambientLight);
 
     // Crear el Sol con MeshStandardMaterial para poder usar 'emissive'
-    const sunGeometry = new THREE.SphereGeometry(2, 128, 128); // Mayor resolución para que la textura se vea mejor
-    const sunTextureMap = new THREE.TextureLoader().load(solTexture); // Cargar la textura del Sol
+    const sunGeometry = new THREE.SphereGeometry(2, 128, 128);
+    const sunTextureMap = new THREE.TextureLoader().load(solTexture);
 
     const sunMaterial = new THREE.MeshStandardMaterial({
-      map: sunTextureMap,  // Textura del sol
-      emissive: 0xffd200, // Resplandor amarillo
-      emissiveIntensity: 1.5, // Intensidad del resplandor
-      roughness: 0.2, // Textura ligeramente rugosa
-      metalness: 0.5, // Un toque metálico
-      emissiveMap: sunTextureMap,  // Asignar la misma textura al resplandor
+      map: sunTextureMap,
+      emissive: 0xffd200,
+      emissiveIntensity: 1.5,
+      roughness: 0.2,
+      metalness: 0.5,
+      emissiveMap: sunTextureMap,
     });
 
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
     // Añadir efecto de resplandor (Glow) al Sol
-    const glowGeometry = new THREE.SphereGeometry(2.5, 128, 128); // Más grande que la esfera del Sol
+    const glowGeometry = new THREE.SphereGeometry(2.5, 128, 128);
     const glowMaterial = new THREE.MeshBasicMaterial({
       color: 0xffd200,
       transparent: true,
@@ -58,17 +62,25 @@ const SolarSystem = () => {
     const glow = new THREE.Mesh(glowGeometry, glowMaterial);
     scene.add(glow);
 
+    // Cargar las texturas de los planetas
+    const textures = {
+      planetaRojo: new THREE.TextureLoader().load(planetaRojo),
+      planetaAzul: new THREE.TextureLoader().load(planetaAzul),
+      planetaPurple: new THREE.TextureLoader().load(planetaPurple),
+      planetaVerde: new THREE.TextureLoader().load(planetaVerde),
+    };
+
     // Planetas
     const planets = [
-      { size: 0.3, distance: 5, color: '#9b59b6', link: '/viewsdescription' },
-      { size: 0.5, distance: 8, color: '#0066FF', link: '/projects' },
-      { size: 0.7, distance: 12, color: '#00FF00', link: '/contacts' },
-      { size: 1, distance: 16, color: '#FF0000', link: '/' },
+      { size: 0.3, distance: 5, texture: textures.planetaRojo, link: '/viewsdescription' },
+      { size: 0.5, distance: 8, texture: textures.planetaAzul, link: '/projects' },
+      { size: 0.7, distance: 12, texture: textures.planetaVerde, link: '/contacts' },
+      { size: 1, distance: 16, texture: textures.planetaPurple, link: '/' },
     ];
 
-    planetsRef.current = planets.map(({ size, distance, color, link }) => {
+    planetsRef.current = planets.map(({ size, distance, texture, link }) => {
       const geometry = new THREE.SphereGeometry(size, 32, 32);
-      const material = new THREE.MeshStandardMaterial({ color });
+      const material = new THREE.MeshStandardMaterial({ map: texture });
       const planet = new THREE.Mesh(geometry, material);
       planet.position.x = distance;
       planet.userData = { link };
