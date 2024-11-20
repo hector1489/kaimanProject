@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useNavigate } from "react-router-dom";
 import "./solarSystem.css";
+import solTexture from "../../assets/planetas/solTexture.png"; // Asegúrate de tener la ruta correcta
 
 const SolarSystem = () => {
   const mountRef = useRef(null);
@@ -11,7 +12,6 @@ const SolarSystem = () => {
   const navigate = useNavigate();
   const planetsRef = useRef([]);
 
-  // Crear la escena, cámara, renderizador, planetas y sol
   useEffect(() => {
     const width = mountRef.current.clientWidth;
     const height = mountRef.current.clientHeight;
@@ -21,18 +21,42 @@ const SolarSystem = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
     mountRef.current.appendChild(renderer.domElement);
-    scene.background = null;
+    scene.background = null;  // Fondo transparente
 
-    // Luz direccional
+    // Luz direccional para simular la luz del Sol
     const light = new THREE.DirectionalLight(0xffffff, 2);
     light.position.set(0, 1, 1).normalize();
     scene.add(light);
 
-    // Sol
-    const sunGeometry = new THREE.SphereGeometry(2, 32, 32);
-    const sunMaterial = new THREE.MeshStandardMaterial({ color: '#873600', emissive: 0xffd200 });
+    // Luz ambiental suave
+    const ambientLight = new THREE.AmbientLight(0x404040, 0.5); // Luz suave para detalles y sombras sutiles
+    scene.add(ambientLight);
+
+    // Crear el Sol con MeshStandardMaterial para poder usar 'emissive'
+    const sunGeometry = new THREE.SphereGeometry(2, 128, 128); // Mayor resolución para que la textura se vea mejor
+    const sunTextureMap = new THREE.TextureLoader().load(solTexture); // Cargar la textura del Sol
+
+    const sunMaterial = new THREE.MeshStandardMaterial({
+      map: sunTextureMap,  // Textura del sol
+      emissive: 0xffd200, // Resplandor amarillo
+      emissiveIntensity: 1.5, // Intensidad del resplandor
+      roughness: 0.2, // Textura ligeramente rugosa
+      metalness: 0.5, // Un toque metálico
+      emissiveMap: sunTextureMap,  // Asignar la misma textura al resplandor
+    });
+
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
+
+    // Añadir efecto de resplandor (Glow) al Sol
+    const glowGeometry = new THREE.SphereGeometry(2.5, 128, 128); // Más grande que la esfera del Sol
+    const glowMaterial = new THREE.MeshBasicMaterial({
+      color: 0xffd200,
+      transparent: true,
+      opacity: 0.3, // Hacerlo más transparente
+    });
+    const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+    scene.add(glow);
 
     // Planetas
     const planets = [
@@ -54,27 +78,27 @@ const SolarSystem = () => {
 
     camera.position.z = cameraZ;
 
-    // Función de animación
+    // Función de animación mejorada
     const animate = () => {
       requestAnimationFrame(animate);
 
       // Rotación del Sol
       sun.rotation.y += sunRotationSpeed;
 
-      // Movimiento planetas
+      // Movimiento de los planetas (órbitas)
       planetsRef.current.forEach(({ planet, distance, angle }, index) => {
-        angle += 0.001;
+        angle += 0.0005;
         planet.position.x = Math.cos(angle) * distance;
         planet.position.z = Math.sin(angle) * distance;
         planetsRef.current[index].angle = angle;
       });
 
-      // Actualizar cámara
+      // Actualización de la cámara
       camera.position.z = cameraZ;
       camera.rotation.x = cameraRotation.x;
       camera.rotation.y = cameraRotation.y;
 
-      // Renderizar escena
+      // Renderizado de la escena
       renderer.render(scene, camera);
     };
 
@@ -108,11 +132,11 @@ const SolarSystem = () => {
       }
     };
 
-    // Agregar los eventos
+    // Agregar eventos
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("click", onMouseClick);
 
-    // Limpieza de los eventos al desmontar el componente
+    // Limpieza de eventos al desmontar
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("click", onMouseClick);
@@ -121,24 +145,6 @@ const SolarSystem = () => {
       }
     };
   }, [cameraZ, cameraRotation, sunRotationSpeed, navigate]);
-
-  // Actualizar el tamaño del renderizado al cambiar el tamaño de la ventana
-  useEffect(() => {
-    const handleResize = () => {
-      const width = mountRef.current.clientWidth;
-      const height = mountRef.current.clientHeight;
-      const renderer = mountRef.current.querySelector('canvas').__renderer;
-      renderer.setSize(width, height);
-      const camera = mountRef.current.querySelector('canvas').__camera;
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return <div ref={mountRef} style={{ width: "100%", height: "100vh" }}></div>;
 };
