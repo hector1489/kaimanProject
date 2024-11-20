@@ -24,13 +24,13 @@ const SolarSystem = () => {
     scene.background = null;
 
     // Luz direccional
-    const light = new THREE.DirectionalLight(0xffffff, 1);
+    const light = new THREE.DirectionalLight(0xffffff, 2);
     light.position.set(0, 1, 1).normalize();
     scene.add(light);
 
     // Sol
     const sunGeometry = new THREE.SphereGeometry(2, 32, 32);
-    const sunMaterial = new THREE.MeshStandardMaterial({ color: '#873600', emissive: 0xFDB813 });
+    const sunMaterial = new THREE.MeshStandardMaterial({ color: '#873600', emissive: 0xffd200 });
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
