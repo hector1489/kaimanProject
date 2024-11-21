@@ -52,15 +52,20 @@ const SolarSystem = () => {
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
-    // Añadir efecto de resplandor (Glow) al Sol
-    const glowGeometry = new THREE.SphereGeometry(2.5, 128, 128);
-    const glowMaterial = new THREE.MeshBasicMaterial({
-      color: 0xffd200,
-      transparent: true,
-      opacity: 0.3, // Hacerlo más transparente
+    // Crear un resplandor difuso más fluido usando varias esferas
+    const glowRadius = [2.5, 3, 3.5, 4, 4.5];
+    const glowOpacity = [0.2, 0.15, 0.1, 0.05, 0.02];
+
+    glowRadius.forEach((radius, index) => {
+      const glowGeometry = new THREE.SphereGeometry(radius, 128, 128);
+      const glowMaterial = new THREE.MeshBasicMaterial({
+        color: 0xffd200,
+        transparent: true,
+        opacity: glowOpacity[index],
+      });
+      const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+      scene.add(glow);
     });
-    const glow = new THREE.Mesh(glowGeometry, glowMaterial);
-    scene.add(glow);
 
     // Cargar las texturas de los planetas
     const textures = {
@@ -73,9 +78,9 @@ const SolarSystem = () => {
     // Planetas
     const planets = [
       { size: 0.3, distance: 5, texture: textures.planetaRojo, link: '/viewsdescription' },
-      { size: 0.5, distance: 8, texture: textures.planetaAzul, link: '/projects' },
-      { size: 0.7, distance: 12, texture: textures.planetaVerde, link: '/contacts' },
-      { size: 1, distance: 16, texture: textures.planetaPurple, link: '/' },
+      { size: 1, distance: 8, texture: textures.planetaAzul, link: '/projects' },
+      { size: 0.5, distance: 12, texture: textures.planetaVerde, link: '/contacts' },
+      { size: 0.7, distance: 16, texture: textures.planetaPurple, link: '/' },
     ];
 
     planetsRef.current = planets.map(({ size, distance, texture, link }) => {
