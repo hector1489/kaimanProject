@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { CSS2DRenderer, CSS2DObject } from "three/examples/jsm/renderers/CSS2DRenderer";
 import { useNavigate } from "react-router-dom";
 import "./solarSystem.css";
 import solTexture from "../../assets/planetas/solTexture.png";
@@ -27,6 +28,14 @@ const SolarSystem = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
     mountRef.current.appendChild(renderer.domElement);
+
+    // Crear CSS2DRenderer para etiquetas
+    const labelRenderer = new CSS2DRenderer();
+    labelRenderer.setSize(width, height);
+    labelRenderer.domElement.style.position = "absolute";
+    labelRenderer.domElement.style.top = "0px";
+    mountRef.current.appendChild(labelRenderer.domElement);
+
     scene.background = null;
 
     // Luz direccional y ambiental
@@ -75,18 +84,29 @@ const SolarSystem = () => {
     };
 
     const planets = [
-      { size: 0.3, distance: 5, texture: textures.planetaRojo, link: '/viewsdescription' },
-      { size: 1, distance: 8, texture: textures.planetaAzul, link: '/projects' },
-      { size: 0.5, distance: 12, texture: textures.planetaVerde, link: '/contacts' },
-      { size: 0.7, distance: 16, texture: textures.planetaPurple, link: '/' },
+      { size: 0.3, distance: 5, texture: textures.planetaRojo, name: "Descripcion", link: '/viewsdescription' },
+      { size: 1, distance: 8, texture: textures.planetaAzul, name: "Proyectos", link: '/projects' },
+      { size: 0.5, distance: 12, texture: textures.planetaVerde, name: "Contacto", link: '/contacts' },
+      { size: 0.7, distance: 16, texture: textures.planetaPurple, name: "Home", link: '/' },
     ];
 
-    planetsRef.current = planets.map(({ size, distance, texture, link }) => {
+    planetsRef.current = planets.map(({ size, distance, texture, name, link }) => {
       const geometry = new THREE.SphereGeometry(size, 32, 32);
       const material = new THREE.MeshStandardMaterial({ map: texture });
       const planet = new THREE.Mesh(geometry, material);
       planet.position.x = distance;
       planet.userData = { link };
+
+      // Crear una etiqueta con el nombre del planeta
+      const label = document.createElement("div");
+      label.className = "planet-label";
+      label.textContent = name;
+      label.style.color = "white";
+      label.style.fontSize = "12px";
+      const labelObject = new CSS2DObject(label);
+      labelObject.position.set(0, 0, 0);
+      planet.add(labelObject);
+
       scene.add(planet);
       return { planet, distance, angle: Math.random() * Math.PI * 2 };
     });
@@ -119,6 +139,7 @@ const SolarSystem = () => {
 
       // Renderizado
       renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);  // Renderizar etiquetas
     };
 
     animate();
@@ -168,6 +189,7 @@ const SolarSystem = () => {
       window.removeEventListener("click", onMouseClick);
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
+        mountRef.current.removeChild(labelRenderer.domElement);
       }
     };
   }, [cameraZ, cameraRotation, sunRotationSpeed, navigate]);
