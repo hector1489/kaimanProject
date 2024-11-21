@@ -16,6 +16,8 @@ const SolarSystem = () => {
   const navigate = useNavigate();
   const planetsRef = useRef([]);
 
+  const sunRotationSpeedRef = useRef(sunRotationSpeed);
+
   useEffect(() => {
     const width = mountRef.current.clientWidth;
     const height = mountRef.current.clientHeight;
@@ -27,19 +29,16 @@ const SolarSystem = () => {
     mountRef.current.appendChild(renderer.domElement);
     scene.background = null;
 
-    // Luz direccional para simular la luz del Sol
+    // Luz direccional y ambiental
     const light = new THREE.DirectionalLight(0xffffff, 2);
     light.position.set(0, 1, 1).normalize();
     scene.add(light);
-
-    // Luz ambiental suave
     const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
     scene.add(ambientLight);
 
-    // Crear el Sol con MeshStandardMaterial para poder usar 'emissive'
+    // Sol con material emissivo
     const sunGeometry = new THREE.SphereGeometry(2, 128, 128);
     const sunTextureMap = new THREE.TextureLoader().load(solTexture);
-
     const sunMaterial = new THREE.MeshStandardMaterial({
       map: sunTextureMap,
       emissive: 0xffd200,
@@ -52,7 +51,7 @@ const SolarSystem = () => {
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
-    // Crear un resplandor difuso más fluido usando varias esferas
+    // Resplandor del Sol
     const glowRadius = [2.5, 3, 3.5, 4, 4.5];
     const glowOpacity = [0.2, 0.15, 0.1, 0.05, 0.02];
 
@@ -75,7 +74,6 @@ const SolarSystem = () => {
       planetaVerde: new THREE.TextureLoader().load(planetaVerde),
     };
 
-    // Planetas
     const planets = [
       { size: 0.3, distance: 5, texture: textures.planetaRojo, link: '/viewsdescription' },
       { size: 1, distance: 8, texture: textures.planetaAzul, link: '/projects' },
@@ -95,14 +93,18 @@ const SolarSystem = () => {
 
     camera.position.z = cameraZ;
 
-    // Función de animación mejorada
+    // Interpolación suave de la cámara y del Sol
+    let targetCameraZ = cameraZ;
+    let targetCameraRotation = { ...cameraRotation };
+    let targetSunRotationSpeed = sunRotationSpeed;
+
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Rotación del Sol
-      sun.rotation.y += sunRotationSpeed;
+      // Rotación suave del Sol
+      sun.rotation.y += sunRotationSpeedRef.current;
 
-      // Movimiento de los planetas (órbitas)
+      // Movimiento orbital suave de los planetas
       planetsRef.current.forEach(({ planet, distance, angle }, index) => {
         angle += 0.0005;
         planet.position.x = Math.cos(angle) * distance;
@@ -110,25 +112,32 @@ const SolarSystem = () => {
         planetsRef.current[index].angle = angle;
       });
 
-      // Actualización de la cámara
-      camera.position.z = cameraZ;
-      camera.rotation.x = cameraRotation.x;
-      camera.rotation.y = cameraRotation.y;
+      // Suavizado de la posición de la cámara con Lerp
+      camera.position.z = THREE.MathUtils.lerp(camera.position.z, targetCameraZ, 0.05);
+      camera.rotation.x = THREE.MathUtils.lerp(camera.rotation.x, targetCameraRotation.x, 0.05);
+      camera.rotation.y = THREE.MathUtils.lerp(camera.rotation.y, targetCameraRotation.y, 0.05);
 
-      // Renderizado de la escena
+      // Renderizado
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Manejo del scroll
     const handleScroll = (event) => {
       const delta = event.deltaY;
-      setCameraZ((prevCameraZ) => Math.max(10, prevCameraZ - delta * 0.02));
-      setCameraRotation((prevRotation) => ({
-        x: prevRotation.x + delta * 0.0005,
-        y: prevRotation.y + delta * 0.0005,
-      }));
+
+      // Suavizado de la velocidad de rotación del Sol
+      targetSunRotationSpeed = sunRotationSpeed + delta * 0.0000005;
+      sunRotationSpeedRef.current = THREE.MathUtils.lerp(sunRotationSpeedRef.current, targetSunRotationSpeed, 0.1);
+
+      // Suavizado de la distancia de la cámara
+      targetCameraZ = Math.max(10, targetCameraZ - delta * 0.02);
+
+      // Suavizado de la rotación de la cámara
+      targetCameraRotation = {
+        x: cameraRotation.x + delta * 0.0005,
+        y: cameraRotation.y + delta * 0.0005,
+      };
     };
 
     // Manejo de clics sobre los planetas
@@ -153,7 +162,7 @@ const SolarSystem = () => {
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("click", onMouseClick);
 
-    // Limpieza de eventos al desmontar
+    // Limpieza de eventos
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("click", onMouseClick);
