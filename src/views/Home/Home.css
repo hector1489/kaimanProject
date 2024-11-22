@@ -1,5 +1,6 @@
 .container-Home {
   width: 100%;
+  position: relative;
 }
 
 .container-arrow {
@@ -7,4 +8,35 @@
   height: auto;
   justify-content: center;
   align-items: center;
+}
+
+.home-intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  translate: 0px 80px;
+}
+
+.home-section-text {
+  color: white;
+}
+
+.home-section-text h3 {
+  font-size: 25px;
+  color: white;
+}
+
+.home-rounded-image {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 3px 3px 20px rgba(199, 189, 189, 0.973);
+  border: 8px solid #2196F3;
 }

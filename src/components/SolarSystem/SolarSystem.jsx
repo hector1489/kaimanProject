@@ -139,7 +139,7 @@ const SolarSystem = () => {
 
       // Renderizado
       renderer.render(scene, camera);
-      labelRenderer.render(scene, camera);  // Renderizar etiquetas
+      labelRenderer.render(scene, camera);
     };
 
     animate();
