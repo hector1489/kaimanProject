@@ -8,6 +8,8 @@ import planetaRojo from "../../assets/planetas/planetaRojo.png";
 import planetaAzul from "../../assets/planetas/planetaAzul.png";
 import planetaPurple from "../../assets/planetas/planetaPurple.png";
 import planetaVerde from "../../assets/planetas/planetaVerde.png";
+import smokeCometa from "../../assets/planetas/smokeBlue2.png"
+import moonTexture from "../../assets/planetas/textureMoon.png"
 
 const SolarSystem = () => {
   const mountRef = useRef(null);
@@ -16,6 +18,7 @@ const SolarSystem = () => {
   const [sunRotationSpeed, setSunRotationSpeed] = useState(0.00005);
   const navigate = useNavigate();
   const planetsRef = useRef([]);
+  const cometsRef = useRef([]);
 
   const sunRotationSpeedRef = useRef(sunRotationSpeed);
 
@@ -111,6 +114,103 @@ const SolarSystem = () => {
       return { planet, distance, angle: Math.random() * Math.PI * 2 };
     });
 
+    // Función para crear cometas
+    const createComet = () => {
+      const cometGeometry = new THREE.SphereGeometry(0.15, 8, 8);
+      const cometMaterial = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        emissive: 0x446ede,
+        emissiveIntensity: 1.5,
+        roughness: 0.1,
+        metalness: 0.9,
+        transparent: true,
+        opacity: 0.8,
+      });
+    
+      const comet = new THREE.Mesh(cometGeometry, cometMaterial);
+    
+      // Random Initial Position
+      comet.position.set(
+        Math.random() * 20 - 10,
+        Math.random() * 10 - 5,
+        Math.random() * 20 - 10
+      );
+    
+      // Comet Tail Geometry and Material
+      const cometTailGeometry = new THREE.BufferGeometry();
+      const cometTailVertices = [];
+      const tailLength = 70;
+    
+      // Initialize the tail with particles that don't move yet
+      for (let i = 0; i < tailLength; i++) {
+        cometTailVertices.push(
+          comet.position.x,
+          comet.position.y,
+          comet.position.z
+        );
+      }
+    
+      cometTailGeometry.setAttribute('position', new THREE.Float32BufferAttribute(cometTailVertices, 3));
+      const cometTailMaterial = new THREE.PointsMaterial({
+        color: 0x446ede,
+        size: 0.1,
+        sizeAttenuation: true,
+        transparent: true,
+        opacity: 0.5,
+        map: new THREE.TextureLoader().load(smokeCometa),
+        alphaMap: new THREE.TextureLoader().load(moonTexture),
+      });
+    
+      const cometTail = new THREE.Points(cometTailGeometry, cometTailMaterial);
+    
+      scene.add(comet);
+      scene.add(cometTail);
+    
+      // Comet Movement and Tail Update
+      let direction = new THREE.Vector3(
+        Math.random() * 0.1 - 0.05,
+        Math.random() * 0.1 - 0.05,
+        Math.random() * 0.1 - 0.05
+      );
+    
+      const animateComet = () => {
+        comet.position.add(direction);
+    
+        // Update comet tail positions and opacity
+        const positions = cometTailGeometry.attributes.position.array;
+        for (let i = 0; i < cometTailVertices.length; i += 3) {
+          positions[i] = comet.position.x - direction.x * (i / 3);
+          positions[i + 1] = comet.position.y - direction.y * (i / 3);
+          positions[i + 2] = comet.position.z - direction.z * (i / 3);
+    
+          // Calculate distance-based opacity with a smoother falloff
+          const distance = new THREE.Vector3(positions[i], positions[i + 1], positions[i + 2]).distanceTo(comet.position);
+          const opacity = Math.max(0.1, 1 - distance / 15);
+          positions[i + 3] = opacity;
+        }
+        cometTailGeometry.attributes.position.needsUpdate = true;
+    
+        // Fade out the comet and tail over time
+        cometMaterial.opacity -= 0.001;
+        cometTailMaterial.opacity -= 0.001;
+    
+        // Remove the comet and tail when they're too far or faded
+        if (comet.position.length() > 30 || cometMaterial.opacity <= 0.1) {
+          scene.remove(comet);
+          scene.remove(cometTail);
+        }
+    
+        requestAnimationFrame(animateComet);
+      };
+    
+      animateComet();
+    
+      cometsRef.current.push({ comet, cometTail });
+    };
+
+    // Crear cometas aleatorios 
+    const cometInterval = setInterval(createComet, 5000);
+
     camera.position.z = cameraZ;
 
     // Interpolación suave de la cámara y del Sol
@@ -187,6 +287,7 @@ const SolarSystem = () => {
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("click", onMouseClick);
+      clearInterval(cometInterval);
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
         mountRef.current.removeChild(labelRenderer.domElement);
