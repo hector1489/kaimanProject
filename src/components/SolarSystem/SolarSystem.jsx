@@ -118,95 +118,101 @@ const SolarSystem = () => {
     const createComet = () => {
       const cometGeometry = new THREE.SphereGeometry(0.15, 8, 8);
       const cometMaterial = new THREE.MeshStandardMaterial({
-        color: 0xffffff,
-        emissive: 0x446ede,
-        emissiveIntensity: 1.5,
-        roughness: 0.1,
-        metalness: 0.9,
-        transparent: true,
-        opacity: 0.8,
+          color: 0xffffff,
+          emissive: 0x446ede,
+          emissiveIntensity: 1.5,
+          roughness: 0.2,
+          metalness: 0.5,
+          transparent: true,
+          opacity: 0.8,
       });
-    
+  
       const comet = new THREE.Mesh(cometGeometry, cometMaterial);
-    
-      // Random Initial Position
+  
+      // Posición inicial aleatoria
       comet.position.set(
-        Math.random() * 20 - 10,
-        Math.random() * 10 - 5,
-        Math.random() * 20 - 10
+          Math.random() * 20 - 10,
+          Math.random() * 10 - 5,
+          Math.random() * 20 - 10
       );
-    
-      // Comet Tail Geometry and Material
+  
+      // Geometría y material de la cola del cometa
       const cometTailGeometry = new THREE.BufferGeometry();
       const cometTailVertices = [];
-      const tailLength = 70;
-    
-      // Initialize the tail with particles that don't move yet
+      const tailColors = [];
+      const tailLength = 50;
+  
+      // Inicializar la cola con partículas que no se mueven todavía
       for (let i = 0; i < tailLength; i++) {
-        cometTailVertices.push(
-          comet.position.x,
-          comet.position.y,
-          comet.position.z
-        );
+          const densityFactor = 1 - i / tailLength;
+          const particleCount = Math.round(densityFactor * 10);
+  
+          for (let j = 0; j < particleCount; j++) {
+              cometTailVertices.push(
+                  comet.position.x,
+                  comet.position.y,
+                  comet.position.z
+              );
+  
+              const t = i / tailLength;
+              const color = new THREE.Color().lerpColors(new THREE.Color(0x446ede), new THREE.Color(0xffffff), t);
+              tailColors.push(color.r, color.g, color.b);
+          }
       }
-    
+  
       cometTailGeometry.setAttribute('position', new THREE.Float32BufferAttribute(cometTailVertices, 3));
+      cometTailGeometry.setAttribute('color', new THREE.Float32BufferAttribute(tailColors, 3));
       const cometTailMaterial = new THREE.PointsMaterial({
-        color: 0x446ede,
-        size: 0.1,
-        sizeAttenuation: true,
-        transparent: true,
-        opacity: 0.5,
-        map: new THREE.TextureLoader().load(smokeCometa),
-        alphaMap: new THREE.TextureLoader().load(moonTexture),
+          size: 0.1,
+          sizeAttenuation: true,
+          transparent: true,
+          opacity: 0.5,
+          vertexColors: true,
+          map: new THREE.TextureLoader().load(smokeCometa),
+          alphaMap: new THREE.TextureLoader().load(moonTexture),
       });
-    
+  
       const cometTail = new THREE.Points(cometTailGeometry, cometTailMaterial);
-    
+  
       scene.add(comet);
       scene.add(cometTail);
-    
-      // Comet Movement and Tail Update
+  
+      // Movimiento del cometa y actualización de la cola
       let direction = new THREE.Vector3(
-        Math.random() * 0.1 - 0.05,
-        Math.random() * 0.1 - 0.05,
-        Math.random() * 0.1 - 0.05
+          Math.random() * 0.1 - 0.05,
+          Math.random() * 0.1 - 0.05,
+          Math.random() * 0.1 - 0.05
       );
-    
+  
       const animateComet = () => {
-        comet.position.add(direction);
-    
-        // Update comet tail positions and opacity
-        const positions = cometTailGeometry.attributes.position.array;
-        for (let i = 0; i < cometTailVertices.length; i += 3) {
-          positions[i] = comet.position.x - direction.x * (i / 3);
-          positions[i + 1] = comet.position.y - direction.y * (i / 3);
-          positions[i + 2] = comet.position.z - direction.z * (i / 3);
-    
-          // Calculate distance-based opacity with a smoother falloff
-          const distance = new THREE.Vector3(positions[i], positions[i + 1], positions[i + 2]).distanceTo(comet.position);
-          const opacity = Math.max(0.1, 1 - distance / 15);
-          positions[i + 3] = opacity;
-        }
-        cometTailGeometry.attributes.position.needsUpdate = true;
-    
-        // Fade out the comet and tail over time
-        cometMaterial.opacity -= 0.001;
-        cometTailMaterial.opacity -= 0.001;
-    
-        // Remove the comet and tail when they're too far or faded
-        if (comet.position.length() > 30 || cometMaterial.opacity <= 0.1) {
-          scene.remove(comet);
-          scene.remove(cometTail);
-        }
-    
-        requestAnimationFrame(animateComet);
+          comet.position.add(direction);
+  
+          // Actualizar las posiciones y opacidad de la cola del cometa
+          const positions = cometTailGeometry.attributes.position.array;
+          for (let i = 0; i < cometTailVertices.length; i += 3) {
+              positions[i] = comet.position.x - direction.x * (i / 3);
+              positions[i + 1] = comet.position.y - direction.y * (i / 3);
+              positions[i + 2] = comet.position.z - direction.z * (i / 3);
+          }
+          cometTailGeometry.attributes.position.needsUpdate = true;
+  
+          // Atenuar el cometa y la cola con el tiempo
+          cometMaterial.opacity -= 0.001;
+          cometTailMaterial.opacity -= 0.001;
+  
+          // Eliminar el cometa y la cola cuando están demasiado lejos o atenuados
+          if (comet.position.length() > 30 || cometMaterial.opacity <= 0.1) {
+              scene.remove(comet);
+              scene.remove(cometTail);
+          }
+  
+          requestAnimationFrame(animateComet);
       };
-    
+  
       animateComet();
-    
+  
       cometsRef.current.push({ comet, cometTail });
-    };
+  };
 
     // Crear cometas aleatorios 
     const cometInterval = setInterval(createComet, 5000);
