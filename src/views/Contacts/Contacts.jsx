@@ -3,7 +3,7 @@ import './Contacts.css'
 
 const Contacts = () => {
   return (
-    <div className="container-contacts animated-text-dos">
+    <div className="container-contacts">
       < Form />
     </div>
   );
