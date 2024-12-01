@@ -148,6 +148,7 @@ const SolarSystem = () => {
         opacity: 0.5,
         vertexColors: true,
         map: new THREE.TextureLoader().load(smokeCometa),
+        blending: THREE.AdditiveBlending,
       });
     
       // Crear partículas de la cola
@@ -184,6 +185,14 @@ const SolarSystem = () => {
         cometMaterial.opacity -= 0.001;
         cometTailMaterial.opacity -= 0.001;
     
+        // Agregar un brillo a la cola con un gradiente de opacidad (más cerca del cometa es más brillante)
+        for (let i = 0; i < tailLength; i++) {
+          const particle = tailParticles[i];
+          const distanceFromComet = particle.distanceTo(comet.position);
+          const tailOpacity = Math.max(0, 1 - distanceFromComet * 0.02);
+          cometTailMaterial.opacity = tailOpacity;
+        }
+    
         // Eliminar el cometa y la cola cuando están demasiado lejos o atenuados
         if (comet.position.length() > 30 || cometMaterial.opacity <= 0.1) {
           scene.remove(comet);
@@ -197,6 +206,7 @@ const SolarSystem = () => {
     
       cometsRef.current.push({ comet, cometTail });
     };
+    
     
 
     // Crear cometas aleatorios 
