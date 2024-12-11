@@ -206,8 +206,6 @@ const SolarSystem = () => {
     
       cometsRef.current.push({ comet, cometTail });
     };
-    
-    
 
     // Crear cometas aleatorios 
     const cometInterval = setInterval(createComet, 5000);
