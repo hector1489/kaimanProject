@@ -1,62 +1,34 @@
 [
-    {
-      "question": "¿Cómo puedo registrarme?",
-      "answer": "Para registrarte, haz clic en 'Registrar Usuario' en el panel de control."
-    },
-    {
-      "question": "¿Dónde puedo ver los análisis?",
-      "answer": "Puedes ver los análisis haciendo clic en el botón 'Análisis' en el panel de control."
-    },
-    {
-      "question": "¿Cómo puedo salir?",
-      "answer": "Haz clic en el icono de 'Cerrar sesión' en la parte inferior izquierda."
-    },
-    {
-      "question": "¿Cómo puedo iniciar sesión?",
-      "answer": "Para iniciar sesión, simplemente ve a la página principal y completa el formulario de inicio de sesión."
-    },
-    {
-      "question": "¿Dónde puedo ver el resumen de la auditoría?",
-      "answer": "Puedes ver el resumen de la auditoría haciendo clic en 'Resumen Auditoría' en el menú Documentacion."
-    },
-    {
-      "question": "¿Cómo puedo acceder al formulario de auditoría?",
-      "answer": "El formulario de auditoría está disponible en la sección 'Formulario Auditoría'. Accede desde el dispositivo mobile a la aplicacion."
-    },
-    {
-      "question": "¿Qué es el control de desviaciones?",
-      "answer": "El control de desviaciones te permite gestionar y visualizar las desviaciones encontradas durante la auditoría. Puedes acceder a esta sección desde el menú 'Desviaciones'."
-    },
-    {
-      "question": "¿Dónde puedo ver el análisis?",
-      "answer": "Puedes ver los análisis haciendo clic en el botón 'Análisis' en el panel de control o el menú."
-    },
-    {
-      "question": "¿Cómo puedo ver la documentación?",
-      "answer": "Puedes acceder a la documentación desde la sección 'Documentación' en el menú."
-    },
-    {
-      "question": "¿Dónde puedo ver las evidencias fotográficas?",
-      "answer": "Las evidencias fotográficas están disponibles en la sección 'Evidencia Fotográfica'."
-    },
-    {
-      "question": "¿Cómo puedo registrar un nuevo usuario?",
-      "answer": "Para registrar un nuevo usuario, haz clic en 'Registrar Usuario' en Home."
-    },
-    {
-      "question": "¿Cómo puedo ver el detalle de la auditoría?",
-      "answer": "Puedes ver el detalle de la auditoría en la página 'Documentacion'."
-    },
-    {
-      "question": "¿Cómo puedo ver el detalle de las desviaciones?",
-      "answer": "Para ver el detalle de las desviaciones, ve a la sección 'Control de Desviaciones'."
-    },
-    {
-      "question": "¿Qué es el resumen de gerencia?",
-      "answer": "El resumen de gerencia es un informe condensado de los resultados de la auditoría. Puedes verlo en la página 'Resumen gerencia' al interior de Documentacion."
-    },
-    {
-      "question": "¿Cómo puedo obtener el informe de los KPIs?",
-      "answer": "Los KPIs están disponibles en la sección 'KPI' al interior de Documentacion."
-    }
-  ]
+  {
+    "question": "¿Cómo puedo registrarme?",
+    "answer": "No existe un login de usuarios ya que se trata de mi portfolio."
+  },
+  {
+    "question": "¿Cómo puedo salir?",
+    "answer": "Haz clic en el icono de 'Cerrar sesión' en la parte inferior izquierda."
+  },
+  {
+    "question": "¿Quién eres?",
+    "answer": "Soy Héctor González, un apasionado desarrollador web Full Stack."
+  },
+  {
+    "question": "¿En qué trabajas actualmente?",
+    "answer": "Actualmente estoy trabajando como desarrollador web fullstack en Fungily Dev."
+  },
+  {
+    "question": "¿Tienes experiencia trabajando en proyectos freelance?",
+    "answer": "Sí, tengo experiencia en trabajos freelance para la Agrupación Amigos del Puangue, donde también me desempeño como director y desarrollador web."
+  },
+  {
+    "question": "¿Dónde puedo ver más sobre tu trabajo?",
+    "answer": "Puedes conocer más sobre mi trabajo en mi portfolio, o en el sitio web de Fungily Dev: [Fungily Dev](https://www.fungilydev.cl/)."
+  },
+  {
+    "question": "¿Qué tecnologías usas?",
+    "answer": "Trabajo con tecnologías como HTML, CSS, JavaScript, React, Node.js, Express, y bases de datos SQL y NoSQL."
+  },
+  {
+    "question": "¿Tienes alguna imagen o foto en tu portfolio?",
+    "answer": "Sí, puedes ver mi foto en la sección de presentación de mi portfolio."
+  }
+]

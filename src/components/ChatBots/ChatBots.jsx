@@ -62,7 +62,7 @@ const Chatbot = () => {
         {isOpen && (
           <div className='chatbot-form'>
             <div className="chatbot-header">
-              <span>CBP-bot</span>
+              <span>R3ptar-bot</span>
               <i className="fa-solid fa-robot"></i>
             </div>
             <div className="chatbot-body">
@@ -95,7 +95,7 @@ const Chatbot = () => {
         className="chatbot-icon"
         onClick={toggleChatbot}
       >
-        <i className="fas fa-comments"></i>
+        <i className="fa-brands fa-space-awesome"></i>
       </button>
     </div>
   );
