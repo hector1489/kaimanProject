@@ -1,6 +1,18 @@
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
 
 .card {
-  max-width: 400px;
+  max-width: 500px;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
