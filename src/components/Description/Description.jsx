@@ -69,6 +69,7 @@ const Description = () => {
             <Skill iconClass="fab fa-node fa-2x mb-3 text-warning" title="Node.js" />
             <Skill iconClass="fas fa-database fa-2x mb-3 text-warning" title="PostgreSQL" />
             <Skill iconClass="fas fa-key fa-2x mb-3 text-warning" title="JWT" />
+            <Skill iconClass="fa-brands fa-aws text-warning" title="AWS" />
           </div>
         </div>
       </div>
