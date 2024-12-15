@@ -3,7 +3,7 @@
   "projects": [
     {
       "id": 1,
-      "name": "BPM AUDITORIAS",
+      "name": "AUDITORIAS",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/cmpfood.png",
       "description": "Desarrollo de app para auditorias alojada en AWS.",
       "url": "https://github.com/hector1489/"
