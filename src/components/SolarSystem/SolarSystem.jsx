@@ -12,9 +12,9 @@ import smokeCometa from "../../assets/planetas/smokeBlue2.png";
 
 const SolarSystem = () => {
   const mountRef = useRef(null);
-  const [cameraZ, setCameraZ] = useState(25);
-  const [cameraRotation, setCameraRotation] = useState({ x: 0, y: 0 });
-  const [sunRotationSpeed, setSunRotationSpeed] = useState(0.00005);
+  const [cameraZ] = useState(25);
+  const [cameraRotation] = useState({ x: 0, y: 0 });
+  const [sunRotationSpeed] = useState(0.00005);
   const navigate = useNavigate();
   const planetsRef = useRef([]);
   const cometsRef = useRef([]);
