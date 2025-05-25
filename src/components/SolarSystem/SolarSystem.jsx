@@ -143,7 +143,6 @@ const SolarSystem = () => {
         blending: THREE.AdditiveBlending,
       });
 
-      // Crear partículas de la cola
       for (let i = 0; i < tailLength; i++) {
         const particle = new THREE.Vector3(comet.position.x, comet.position.y, comet.position.z);
         tailParticles.push(particle);
@@ -155,7 +154,6 @@ const SolarSystem = () => {
       scene.add(comet);
       scene.add(cometTail);
 
-      // Movimiento del cometa y la cola
       let direction = new THREE.Vector3(
         Math.random() * 0.1 - 0.05,
         Math.random() * 0.1 - 0.05,
@@ -165,7 +163,6 @@ const SolarSystem = () => {
       const animateComet = () => {
         comet.position.add(direction);
 
-        // Actualizar las partículas de la cola
         for (let i = tailLength - 1; i > 0; i--) {
           tailParticles[i].copy(tailParticles[i - 1]);
         }
@@ -173,11 +170,9 @@ const SolarSystem = () => {
 
         cometTailGeometry.attributes.position.needsUpdate = true;
 
-        // Atenuar el cometa y la cola con el tiempo
         cometMaterial.opacity -= 0.001;
         cometTailMaterial.opacity -= 0.001;
 
-        // Eliminar el cometa y la cola cuando están demasiado lejos o atenuados
         if (comet.position.length() > 30 || cometMaterial.opacity <= 0.1) {
           scene.remove(comet);
           scene.remove(cometTail);
