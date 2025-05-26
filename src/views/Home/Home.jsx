@@ -12,7 +12,11 @@ const Home = () => {
       <div className="home-intro">
 
         <div className="d-flex justify-content-center align-items-center">
-          <img className="home-rounded-image" src="src/assets/img/logo_reptar_2025.png" alt="foto2" />
+          <img
+            className="home-rounded-image"
+            src="https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/logo_reptar_2025.png"
+            alt="foto2"
+          />
         </div>
 
         <div className="home-section-text text-center">
