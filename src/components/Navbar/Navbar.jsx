@@ -1,73 +1,61 @@
-import { useState, useEffect } from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
-import lofi from "../../assets/audio/lofi.mp3"
-import './Navbar.css'
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import lofi from "../../assets/audio/lofi.mp3";
+import './Navbar.css';
 
 const Browser = () => {
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false)
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const audioRef = useRef(null);
 
   const setActiveClass = ({ isActive }) => {
     return isActive
       ? "text-warning text-decoration-none me-3 fw-bold"
-      : "text-secondary text-decoration-none me-3"
-  }
+      : "text-secondary text-decoration-none me-3";
+  };
 
-  const toggleAudio = () => {
-    setIsAudioPlaying(!isAudioPlaying)
-  }
+  const toggleAudio = useCallback(() => {
+    setIsAudioPlaying(prev => !prev);
+  }, []);
 
   useEffect(() => {
-    const audioElement = document.getElementById("audioPlayer")
+    const audioElement = audioRef.current;
+    if (!audioElement) return;
 
     if (isAudioPlaying) {
-      audioElement.play()
+      audioElement.play();
     } else {
-      audioElement.pause()
-      audioElement.currentTime = 0
+      audioElement.pause();
     }
-  }, [isAudioPlaying])
+  }, [isAudioPlaying]);
 
   return (
     <Navbar className="container-navbar" expand="md" fixed="top">
-
       <Container>
-
         <Navbar.Brand>
           <div className="navbar-icon text-white text-decoration-none">
-            <button onClick={toggleAudio} className='button-icon-astro'>
+            <button
+              onClick={toggleAudio}
+              className='button-icon-astro'
+              aria-label={isAudioPlaying ? 'Pause background music' : 'Play background music'}
+            >
               <i className={`fa-solid fa-user-astronaut fa-2xl ${isAudioPlaying ? 'playing' : 'paused'}`} />
             </button>
           </div>
-          <audio id="audioPlayer" src={lofi} loop>
-          </audio>
+          <audio ref={audioRef} src={lofi} loop></audio>
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="burguer-button" />
-
         <Navbar.Collapse id="responsive-navbar-nav">
-
           <Nav className="ms-auto">
-            <NavLink to="/" className={setActiveClass}>
-              Inicio
-            </NavLink>
-            <NavLink to="/viewsdescription" className={setActiveClass}>
-              Descripción
-            </NavLink>
-            <NavLink to="/projects" className={setActiveClass}>
-              Proyectos
-            </NavLink>
-            <NavLink to="/contacts" className={setActiveClass}>
-              Contacto
-            </NavLink>
+            <NavLink to="/" className={setActiveClass}>Inicio</NavLink>
+            <NavLink to="/viewsdescription" className={setActiveClass}>Descripción</NavLink>
+            <NavLink to="/projects" className={setActiveClass}>Proyectos</NavLink>
+            <NavLink to="/contacts" className={setActiveClass}>Contacto</NavLink>
           </Nav>
-
         </Navbar.Collapse>
-
       </Container>
-
     </Navbar>
-  )
-}
+  );
+};
 
-export default Browser
+export default Browser;

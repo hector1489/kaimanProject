@@ -1,4 +1,4 @@
-import { GalleryProject, MainList, Video } from "../../components/index.jsx"
+import { GalleryProject, MainList } from "../../components/index.jsx"
 import './Projects.css'
 
 const Projects = () => {

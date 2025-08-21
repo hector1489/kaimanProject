@@ -10,10 +10,14 @@
 .cards-container::-webkit-scrollbar {
   display: none;
 }
+.cards-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .card {
-  max-width: 500px;
-  margin: 20px;
+  max-width: 300px;
+  margin: 1.2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -21,38 +25,27 @@
   border: 1px solid #2196F3;
 }
 
-.card-body {
-  background-color: #333;
-  padding: 15px;
-  transition: transform 0.3s ease-in-out;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover .card-body {
-  transform: translateY(0);
+.card-body {
+  background-color: #333;
+  padding: 1rem;
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .card-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ccc;
-  margin-bottom: 8px;
-}
-
-.card-button {
-  background-color: #2196F3;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 0.5rem;
 }
 
 .css-button-gradient--5 {
@@ -70,6 +63,10 @@
   border: none;
   background-size: 120% auto;
   background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+  text-decoration: none;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .css-button-gradient--5:hover {

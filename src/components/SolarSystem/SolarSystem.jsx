@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import * as THREE from "three";
 import {
   CSS2DRenderer,
@@ -20,9 +20,36 @@ const SolarSystem = () => {
   const planetsRef = useRef([]);
   const cometsRef = useRef([]);
   const cometGenerationActive = useRef(true);
+  const sunRotationSpeedRef = useRef(0.00005);
+  const raycaster = useRef(new THREE.Raycaster());
+  const mouse = useRef(new THREE.Vector2());
 
-  const sunRotationSpeed = 0.00005;
-  const currentSunRotationSpeedRef = useRef(sunRotationSpeed);
+  const handleScroll = useCallback((e) => {
+    const camera = raycaster.current.camera;
+    if (camera) {
+      camera.position.z = Math.max(10, Math.min(50, camera.position.z - e.deltaY * 0.02));
+      sunRotationSpeedRef.current = Math.max(0.00001, Math.min(0.0005, sunRotationSpeedRef.current + e.deltaY * 0.0000005));
+    }
+  }, []);
+
+  const handleClick = useCallback((event) => {
+    const camera = raycaster.current.camera;
+    if (!camera) return;
+
+    mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    raycaster.current.setFromCamera(mouse.current, camera);
+
+    const intersects = raycaster.current.intersectObjects(planetsRef.current.map((p) => p.planet));
+    if (intersects.length > 0) {
+      const { link } = intersects[0].object.userData;
+      if (link) navigate(link);
+    }
+  }, [navigate]);
+
+  const handleVisibilityChange = useCallback(() => {
+    cometGenerationActive.current = !document.hidden;
+  }, []);
 
   useEffect(() => {
     const currentMount = mountRef.current;
@@ -30,10 +57,10 @@ const SolarSystem = () => {
 
     const width = currentMount.clientWidth;
     const height = currentMount.clientHeight;
-
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 25;
+    raycaster.current.camera = camera;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(width, height);
@@ -72,20 +99,16 @@ const SolarSystem = () => {
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
-    const glowMaterials = [];
-    [2.5, 3, 3.5, 4, 4.5].forEach((radius, i) => {
+    const glowMaterials = [2.5, 3, 3.5, 4, 4.5].map((radius, i) => {
       const material = new THREE.MeshBasicMaterial({
         color: 0xffd200,
         transparent: true,
         opacity: [0.2, 0.15, 0.1, 0.05, 0.02][i],
         side: THREE.BackSide,
       });
-      glowMaterials.push(material);
-      const glowSphere = new THREE.Mesh(
-        new THREE.SphereGeometry(radius, 128, 128),
-        material
-      );
+      const glowSphere = new THREE.Mesh(new THREE.SphereGeometry(radius, 128, 128), material);
       scene.add(glowSphere);
+      return material;
     });
 
     const planetConfigs = [
@@ -95,13 +118,8 @@ const SolarSystem = () => {
       { size: 0.7, distance: 16, texture: textures.planetaPurple, name: "Home", link: "/" },
     ];
 
-    const planetGeometries = [];
-    const planetMaterials = [];
-
     planetsRef.current = planetConfigs.map(({ size, distance, texture, name, link }) => {
       const geometry = new THREE.SphereGeometry(size, 32, 32);
-      planetGeometries.push(geometry);
-
       const material = new THREE.MeshStandardMaterial({
         map: texture,
         roughness: 0.8,
@@ -109,10 +127,6 @@ const SolarSystem = () => {
         emissive: new THREE.Color(0x222222),
         emissiveIntensity: 0.2
       });
-      planetMaterials.push(material);
-
-      planetMaterials.push(material);
-
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.x = distance;
       mesh.userData.link = link;
@@ -125,7 +139,7 @@ const SolarSystem = () => {
       mesh.add(labelObj);
 
       scene.add(mesh);
-      return { planet: mesh, distance, angle: Math.random() * Math.PI * 2 };
+      return { planet: mesh, distance, angle: Math.random() * Math.PI * 2, material, geometry };
     });
 
     const cometGeometry = new THREE.SphereGeometry(0.15, 8, 8);
@@ -143,13 +157,7 @@ const SolarSystem = () => {
       if (!cometGenerationActive.current) return;
 
       const cometMesh = new THREE.Mesh(cometGeometry, cometMaterial.clone());
-      cometMesh.position.set(
-        Math.random() * 40 - 20,
-        Math.random() * 20 - 10,
-        Math.random() * 40 - 20
-      );
-
-      const tailParticles = Array.from({ length: 50 }, () => cometMesh.position.clone());
+      const tailParticles = Array.from({ length: 50 }, () => new THREE.Vector3());
       const tailGeometry = new THREE.BufferGeometry().setFromPoints(tailParticles);
       const tailMaterial = new THREE.PointsMaterial({
         size: 0.1,
@@ -157,12 +165,8 @@ const SolarSystem = () => {
         transparent: true,
         opacity: 0.5,
         blending: THREE.AdditiveBlending,
-        vertexColors: false,
       });
       const tailMesh = new THREE.Points(tailGeometry, tailMaterial);
-
-      scene.add(cometMesh);
-      scene.add(tailMesh);
 
       const direction = new THREE.Vector3(
         Math.random() * 0.2 - 0.1,
@@ -178,62 +182,32 @@ const SolarSystem = () => {
         direction,
         opacity: 0.8,
       });
+
+      scene.add(cometMesh);
+      scene.add(tailMesh);
     };
 
     const cometInterval = setInterval(createComet, 3000);
 
-    const handleScroll = (e) => {
-      camera.position.z = Math.max(10, Math.min(50, camera.position.z - e.deltaY * 0.02));
-
-      camera.rotation.x += e.deltaY * 0.00005;
-      camera.rotation.y += e.deltaY * 0.00005;
-      currentSunRotationSpeedRef.current += e.deltaY * 0.0000005;
-      currentSunRotationSpeedRef.current = Math.max(0.00001, Math.min(0.0005, currentSunRotationSpeedRef.current)); // Clamp sun speed
-    };
-
-    const handleClick = (event) => {
-      const mouse = new THREE.Vector2(
-        (event.clientX / window.innerWidth) * 2 - 1,
-        -(event.clientY / window.innerHeight) * 2 + 1
-      );
-      const raycaster = new THREE.Raycaster();
-      raycaster.setFromCamera(mouse, camera);
-
-      const intersects = raycaster.intersectObjects(planetsRef.current.map((p) => p.planet));
-      if (intersects.length > 0) {
-        const { link } = intersects[0].object.userData;
-        if (link) navigate(link);
-      }
-    };
-
-    const handleVisibilityChange = () => {
-      cometGenerationActive.current = !document.hidden;
-      if (!document.hidden) {
-        if (!frameId) {
-          animate();
-        }
-      }
-    };
-
-    const handleResize = () => {
-      const newWidth = currentMount.clientWidth;
-      const newHeight = currentMount.clientHeight;
-      camera.aspect = newWidth / newHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(newWidth, newHeight);
-      labelRenderer.setSize(newWidth, newHeight);
+    const localHandleResize = () => {
+        const newWidth = currentMount.clientWidth;
+        const newHeight = currentMount.clientHeight;
+        camera.aspect = newWidth / newHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(newWidth, newHeight);
+        labelRenderer.setSize(newWidth, newHeight);
     };
 
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("click", handleClick);
     document.addEventListener("visibilitychange", handleVisibilityChange);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", localHandleResize);
 
     let frameId;
     const animate = () => {
       frameId = requestAnimationFrame(animate);
 
-      sun.rotation.y += currentSunRotationSpeedRef.current;
+      sun.rotation.y += sunRotationSpeedRef.current;
 
       planetsRef.current.forEach((obj) => {
         obj.angle += 0.005;
@@ -243,7 +217,6 @@ const SolarSystem = () => {
 
       cometsRef.current = cometsRef.current.filter((cometObj) => {
         cometObj.comet.position.add(cometObj.direction);
-
         for (let i = cometObj.tailParticles.length - 1; i > 0; i--) {
           cometObj.tailParticles[i].copy(cometObj.tailParticles[i - 1]);
         }
@@ -279,15 +252,11 @@ const SolarSystem = () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("click", handleClick);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", localHandleResize);
 
       if (currentMount) {
-        if (renderer.domElement.parentNode === currentMount) {
-          currentMount.removeChild(renderer.domElement);
-        }
-        if (labelRenderer.domElement.parentNode === currentMount) {
-          currentMount.removeChild(labelRenderer.domElement);
-        }
+        currentMount.removeChild(renderer.domElement);
+        currentMount.removeChild(labelRenderer.domElement);
       }
 
       scene.traverse((object) => {
@@ -300,21 +269,18 @@ const SolarSystem = () => {
           }
         }
       });
-
+      
       sunGeometry.dispose();
       sunMaterial.dispose();
       glowMaterials.forEach(mat => mat.dispose());
-      planetGeometries.forEach(geo => geo.dispose());
-      planetMaterials.forEach(mat => mat.dispose());
       cometGeometry.dispose();
       cometMaterial.dispose();
       Object.values(textures).forEach(texture => texture.dispose());
 
       renderer.dispose();
       labelRenderer.domElement = null;
-      console.log("SolarSystem component unmounted and resources disposed.");
     };
-  }, [navigate]);
+  }, [navigate, handleScroll, handleClick, handleVisibilityChange]);
 
   return <div ref={mountRef} className="solar-system-container" />;
 };

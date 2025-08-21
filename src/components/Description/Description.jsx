@@ -1,5 +1,5 @@
 import './Description.css';
-import cv from '../../assets/CV/HectorGonzalez2024horizontal.pdf';
+import cv from '../../assets/CV/Hector_Gonzalez_P_10_2025.pdf';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -33,12 +33,7 @@ const Description = () => {
             <span className="text-info fw-bold">Descargar CV</span>
             <span className="text-warning">.</span>
           </p>
-          <a
-            href={cv}
-            download="Hector_Gonzalez_CV.pdf"
-            className="d-inline-block"
-            rel="noopener noreferrer"
-          >
+          <a href={cv} download="Hector_Gonzalez_CV.pdf" className="d-inline-block" rel="noopener noreferrer">
             <button className="btn css-button-gradient--5 fw-bold">Descargar CV</button>
           </a>
         </div>
@@ -65,8 +60,8 @@ const Description = () => {
         </h4>
         <div className="container">
           <div className="row justify-content-center">
-            {skills.map((skill, index) => (
-              <Skill key={index} iconClass={skill.iconClass} title={skill.title} />
+            {skills.map((skill) => (
+              <Skill key={skill.title} iconClass={skill.iconClass} title={skill.title} />
             ))}
           </div>
         </div>
@@ -75,20 +70,17 @@ const Description = () => {
   );
 };
 
-const Skill = ({ iconClass, title }) => {
-  return (
-    <div className="col-md-4 mb-4">
-      <div
-        className="container-skill bg-dark p-2 rounded text-white d-flex flex-column align-items-center"
-        role="listitem"
-        aria-label={title}
-      >
-        <i className={`${iconClass} text-warning`} aria-hidden="true" title={title}></i>
-        <h3 className="my-2 fw-bold" style={{ fontSize: '1rem' }}>{title}</h3>
-      </div>
+const Skill = ({ iconClass, title }) => (
+  <div className="col-md-4 mb-4">
+    <div className="container-skill bg-dark p-2 rounded text-white d-flex flex-column align-items-center"
+      role="listitem"
+      aria-label={title}
+    >
+      <i className={`${iconClass} text-warning`} aria-hidden="true" title={title}></i>
+      <h3 className="my-2 fw-bold" style={{ fontSize: '1rem' }}>{title}</h3>
     </div>
-  );
-};
+  </div>
+);
 
 Skill.propTypes = {
   iconClass: PropTypes.string.isRequired,
