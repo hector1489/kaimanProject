@@ -1,5 +1,5 @@
 import './Description.css';
-import cv from '../../assets/CV/Hector_Gonzalez_P_10_2025.pdf';
+import cv from '../../assets/CV/Hector_Gonzalez_P_2025.pdf';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
