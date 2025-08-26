@@ -64,6 +64,7 @@ const SolarSystem = () => {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     currentMount.appendChild(renderer.domElement);
 
     const labelRenderer = new CSS2DRenderer();
@@ -74,8 +75,10 @@ const SolarSystem = () => {
     currentMount.appendChild(labelRenderer.domElement);
 
     scene.background = null;
-    scene.add(new THREE.DirectionalLight(0xffffff, 4).position.set(0, 1, 1).normalize());
-    scene.add(new THREE.AmbientLight(0x404040, 1.5));
+
+    // Luces en los planetas
+    scene.add(new THREE.DirectionalLight(0xffffff, 6).position.set(0, 1, 1).normalize());
+    scene.add(new THREE.AmbientLight(0x404040, 2));
 
     const loader = new THREE.TextureLoader();
     const textures = {
@@ -86,6 +89,20 @@ const SolarSystem = () => {
       sol: loader.load(solTexture),
       smoke: loader.load(smokeCometa),
     };
+
+    // Campo de estrellas
+    const starGeometry = new THREE.BufferGeometry();
+    const starVertices = [];
+    for (let i = 0; i < 5000; i++) {
+        const x = (Math.random() - 0.5) * 1000;
+        const y = (Math.random() - 0.5) * 1000;
+        const z = (Math.random() - 0.5) * 1000;
+        starVertices.push(x, y, z);
+    }
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+    const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.5, transparent: true, opacity: 0.8 });
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
 
     const sunGeometry = new THREE.SphereGeometry(2, 128, 128);
     const sunMaterial = new THREE.MeshStandardMaterial({
@@ -125,7 +142,7 @@ const SolarSystem = () => {
         roughness: 0.8,
         metalness: 0,
         emissive: new THREE.Color(0x222222),
-        emissiveIntensity: 0.2
+        emissiveIntensity: 0.5,
       });
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.x = distance;
@@ -143,14 +160,15 @@ const SolarSystem = () => {
     });
 
     const cometGeometry = new THREE.SphereGeometry(0.15, 8, 8);
+    // Material del núcleo del cometa mejorado
     const cometMaterial = new THREE.MeshStandardMaterial({
       color: 0xffffff,
       emissive: 0x446ede,
-      emissiveIntensity: 1.5,
+      emissiveIntensity: 1.8, // Mayor intensidad para un brillo más notable
       roughness: 0.2,
       metalness: 0.5,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.9,
     });
 
     const createComet = () => {
@@ -159,11 +177,12 @@ const SolarSystem = () => {
       const cometMesh = new THREE.Mesh(cometGeometry, cometMaterial.clone());
       const tailParticles = Array.from({ length: 50 }, () => new THREE.Vector3());
       const tailGeometry = new THREE.BufferGeometry().setFromPoints(tailParticles);
+      // Material de la cola del cometa mejorado
       const tailMaterial = new THREE.PointsMaterial({
-        size: 0.1,
+        size: 0.15, // Aumentado el tamaño de las partículas
         map: textures.smoke,
         transparent: true,
-        opacity: 0.5,
+        opacity: 0.3, // Menor opacidad para un efecto más difuso y sutil
         blending: THREE.AdditiveBlending,
       });
       const tailMesh = new THREE.Points(tailGeometry, tailMaterial);
@@ -180,7 +199,7 @@ const SolarSystem = () => {
         tailParticles,
         tailGeometry,
         direction,
-        opacity: 0.8,
+        opacity: 0.9,
       });
 
       scene.add(cometMesh);
@@ -276,6 +295,8 @@ const SolarSystem = () => {
       cometGeometry.dispose();
       cometMaterial.dispose();
       Object.values(textures).forEach(texture => texture.dispose());
+      starGeometry.dispose();
+      starMaterial.dispose();
 
       renderer.dispose();
       labelRenderer.domElement = null;

@@ -12,7 +12,8 @@
 
 .home-intro {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 50px;
   align-items: center;
   position: absolute;
   top: 0;
