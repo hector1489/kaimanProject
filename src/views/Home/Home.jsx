@@ -1,5 +1,5 @@
 
-import { SolarSystem, ChatBots, } from '../../components/index.jsx'
+import { SolarSystem } from '../../components/index.jsx'
 import './Home.css'
 
 const Home = () => {
@@ -36,7 +36,6 @@ const Home = () => {
         <SolarSystem />
       </div>
 
-      <ChatBots />
 
     </div>
 
