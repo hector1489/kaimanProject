@@ -160,11 +160,10 @@ const SolarSystem = () => {
     });
 
     const cometGeometry = new THREE.SphereGeometry(0.15, 8, 8);
-    // Material del núcleo del cometa mejorado
     const cometMaterial = new THREE.MeshStandardMaterial({
       color: 0xffffff,
       emissive: 0x446ede,
-      emissiveIntensity: 1.8, // Mayor intensidad para un brillo más notable
+      emissiveIntensity: 1.8,
       roughness: 0.2,
       metalness: 0.5,
       transparent: true,
@@ -177,12 +176,11 @@ const SolarSystem = () => {
       const cometMesh = new THREE.Mesh(cometGeometry, cometMaterial.clone());
       const tailParticles = Array.from({ length: 50 }, () => new THREE.Vector3());
       const tailGeometry = new THREE.BufferGeometry().setFromPoints(tailParticles);
-      // Material de la cola del cometa mejorado
       const tailMaterial = new THREE.PointsMaterial({
-        size: 0.15, // Aumentado el tamaño de las partículas
+        size: 0.15,
         map: textures.smoke,
         transparent: true,
-        opacity: 0.3, // Menor opacidad para un efecto más difuso y sutil
+        opacity: 0.3,
         blending: THREE.AdditiveBlending,
       });
       const tailMesh = new THREE.Points(tailGeometry, tailMaterial);
