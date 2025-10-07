@@ -3,10 +3,10 @@
   "projects": [
     {
       "id": 1,
-      "name": "Canal Reptar",
-      "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/canalReptar.png",
-      "description": "Mi Canal  De Youtube. Este aun se encuentra en crecimiento.",
-      "url": "https://www.youtube.com/@R3ptar.dev.0303"
+      "name": "COC cvi.",
+      "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/cocpcvi_01.png",
+      "description": "COC eirl. Desarrollo web y aplicaciones de automatización interna.",
+      "url": "https://www.cocpcvi.cl/"
     },
     {
       "id": 2,
