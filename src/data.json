@@ -10,146 +10,153 @@
     },
     {
       "id": 2,
+      "name": "Canal Reptar",
+      "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/canalReptar.png",
+      "description": "Mi Canal  De Youtube. Este aun se encuentra en crecimiento.",
+      "url": "https://www.youtube.com/@R3ptar.dev.0303"
+    },
+    {
+      "id": 3,
       "name": "Aauditorias CMP",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/cmpfood.png",
       "description": "Desarrollo de app para auditorias alojada en AWS.",
       "url": "https://github.com/hector1489/"
     },
      {
-      "id": 3,
+      "id": 4,
       "name": "Balanzas Digitales",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/balanzas.png",
       "description": "Aplicacion para recibir datos de balanzas digitales y almacenarlos en una base de datos.",
       "url": "https://github.com/hector1489/basculas_digital_front"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Auditorias Fungily",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/Auditorias_fungily.png",
       "description": "Aplicacion para realizar auditorias de calidad del establecimiento a travez de servidor en node.js.",
       "url": "https://github.com/hector1489/audit_kpi"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Info",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/info_bl.png",
       "description": "Aplicacion para realizar votaciones de proyectos en linea.",
       "url": "https://github.com/hector1489/info-front"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "A.D.P.",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/refs/heads/main/src/assets/img/ADP.png",
       "description": "Aplicacion informativa para Amigos del Puangue.",
       "url": "https://github.com/hector1489/ADP-Dos"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Registro de socios",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/registroSocios.png",
       "description": "Base de datos que tiene como objetivo principal almacenar información sobre los colaboradores.",
       "url": "https://github.com/hector1489/registroDeSocios"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "PyJ Creaciones",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/PyJ.png",
       "description": "Este proyecto en React + Vite destaca mi capacidad para crear aplicaciones web dinámicas y eficientes para un cliente Pyme.",
       "url": "https://github.com/hector1489/PyJ_Creaciones"
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "Mi Repertorio",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Mi_Repertorio.png",
       "description": "Aplicacion tipo CRUD que modifica y elimina canciones almacenadas en un archivo JSON.",
       "url": "https://github.com/hector1489/mi_Repertorio"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "Registro de Colaboradores",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/colaboradores.png",
       "description": "Planilla base para el registro de colaboradores, destacando mi capacidad para estructurar y gestionar datos de manera eficiente.",
       "url": "https://github.com/hector1489/BaseColaboradores"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": "Poke.Dex",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/pokeDex.png",
       "description": "Aplicación centrada en el consumo eficiente de API y la implementación de Context en React.",
       "url": "https://github.com/hector1489/Poke.dex"
     },
     {
-      "id": 12,
+      "id": 13,
       "name": "Ecommerce Pizza",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/mammaMia.png",
       "description": "Ecommerce Pizza es mi proyecto de comercio electrónico desarrollado en Vite y React, con la elegancia añadida de React-bootstrap.",
       "url": "https://github.com/hector1489/pizzasEcommerce"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "Pet Project",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Pet_Project.png",
       "description": "Aplicacion centrada en mostrar imagenes de perritos para su adopción. Realizada en Vite + React, y React-Bootstrap.",
       "url": "https://github.com/hector1489/petProject/tree/main"
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "Star-Wars.Dex",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/starwarsapi.png",
       "description": "Aplicación dedicada al consumo de la API de Star Wars (Swapi). La aplicación presenta información detallada en tarjetas, con imágenes incorporadas desde un directorio local.",
       "url": "https://github.com/hector1489/starWarsApi"
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "Natural Pics",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/natural_Pics.png",
       "description": "Plataforma dedicada a fotógrafos que promueven el interés por el cuidado ambiental y las fotos de paisajes naturales sin filtros.",
       "url": "https://github.com/hector1489/naturalPics"
     },
     {
-      "id": 16,
+      "id": 17,
       "name": "Happy Cake",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Happy_Cacke2.png",
       "description": "Tienda simple con dos vistas utilizando React y React Router.",
       "url": "https://github.com/hector1489/HappyCake"
     },
     {
-      "id": 17,
+      "id": 18,
       "name": "Inmobiliaria",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/inmobiliaria.png",
       "description": "Inmobiliaria es mi landing page de prueba, donde demuestro mis habilidades en las propiedades de display y JavaScript.",
       "url": "https://github.com/hector1489/inmobiliariajs"
     },
     {
-      "id": 18,
+      "id": 19,
       "name": "Conversor de Monedas",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Captura_conversor.png",
       "description": "Conversor de monedas que obtiene los datos de mindicador.cl y luego muestra un historial del valor de la moneda a convertir en un grafico de los últimos 10 días.",
       "url": "https://github.com/hector1489/conversorMonedas"
     },
     {
-      "id": 19,
+      "id": 20,
       "name": "Iguana page",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/iguana.png",
       "description": "Iguana Page es un proyecto de blog de prueba que demuestra mi destreza en el manejo de diseño con display en flex y float.",
       "url": "https://github.com/hector1489/iguanapage"
     },
     {
-      "id": 20,
+      "id": 21,
       "name": "Cuppon",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/cuppon.png",
       "description": "Cuppon es un documento HTML enriquecido con implementación de CSS y Bootstrap.",
       "url": "https://github.com/hector1489/cuppon"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "React + Tailwind",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/reactTailwind.png",
       "description": "Ecommerce ligero con react, tailwind y daisy UI.",
       "url": "https://github.com/hector1489/React_Tailwind"
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "Poke Lite",
       "image": "https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/Poke_Lite2.png",
       "description": "Con tema del equipo Rocket. Esta aplicacion es una versión ligera del proyecto Poke.Dex",

@@ -6,7 +6,6 @@ import "./Cards.css";
 
 const Cards = () => {
   const { data } = useContext(DataContext);
-  // 1. Validar que los datos existan y sean un array
   const sliceData = data && Array.isArray(data) ? data.slice(0, 14) : [];
 
   return (
@@ -18,7 +17,6 @@ const Cards = () => {
             <div className="container-card">
               <Card.Title className="card-title">{item.name}</Card.Title>
               <Card.Text className="card-text text-warning">{item.description}</Card.Text>
-              {/* 2. Reemplazar Button por un <a> estilizado como botón */}
               <Link
                 to={item.url}
                 target="_blank"
