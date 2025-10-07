@@ -20,20 +20,24 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="d-flex flex-column flex-md-row mt-3">
+         <div className="d-flex flex-column flex-md-row mt-3">
           <div className="container-project-home text-center p-2">
             <p className="text-white">
-              <span className="text-warning fw-bold">¡Hola!</span> Soy un apasionado{' '}
-              <span className="text-info fw-bold">desarrollador web Full Stack</span>. Actualmente
-              me encuentro trabajando como desarrollador web Full Stack en{' '}
-              <a
-                href="https://www.fungilydev.cl/"
-                target="_blank"
+              <span className="text-warning fw-bold">¡Hola!</span> Soy <span className="text-info fw-bold">Héctor González</span>, un desarrollador web Full Stack apasionado por construir soluciones digitales completas.
+            </p>
+            <p className="text-white mt-3">
+              Actualmente, impulso el desarrollo web en{' '}
+              <a 
+                href="https://www.cocpcvi.cl/" 
+                target="_blank" 
                 rel="noopener noreferrer"
               >
-                Fungily Dev
-              </a>. También cuento con experiencia en trabajos freelance para la Agrupación
-              Amigos del Puangue, donde me desempeño como director y desarrollador web.
+                C.O.C. cvi.
+              </a>
+              , combinando esta labor con proyectos freelance y mi rol como director y desarrollador en la Agrupación Amigos del Puangue.
+            </p>
+            <p className="text-white mt-3">
+              Mi enfoque es transformar ideas en aplicaciones funcionales y escalables.
             </p>
           </div>
         </div>
