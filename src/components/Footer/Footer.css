@@ -1,46 +1,84 @@
 
-.footer-cyber {
+.footer-swamp {
   width: 100%;
-  padding: 1.5rem;
-  backdrop-filter: blur(12px);
-  background: rgba(5, 5, 7, 0.8); 
-  border-top: 0.5px solid rgba(0, 243, 255, 0.2);
+  padding: 2rem 1rem;
+  background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.95) 0%, 
+    rgba(5, 10, 5, 0.8) 50%, 
+    transparent 100%
+  );
+  backdrop-filter: blur(8px);
   color: var(--text-main);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: auto; 
+  font-size: 0.85rem;
+  margin-top: 4rem;
   position: relative;
   z-index: 10;
 }
 
-.footer-cyber p {
-  margin: 0;
-  letter-spacing: 1px;
+.footer-content {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.footer-cyber .neon-link-green {
+.footer-swamp:hover .footer-content {
+  opacity: 1;
+}
+
+.footer-swamp p {
+  margin: 0;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.4);
+}
+
+.footer-swamp .neon-link-green {
   color: var(--neon-green);
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2px 5px;
+  border-radius: 4px;
 }
 
-.footer-cyber .neon-link-green:hover {
+.footer-swamp .neon-link-green:hover {
   color: #fff;
-  text-shadow: var(--shadow-green);
+  background: rgba(77, 255, 136, 0.1);
+  text-shadow: 0 0 12px var(--neon-green);
 }
 
-.footer-cyber::before {
+.footer-swamp::before {
   content: "";
   position: absolute;
-  top: -1px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 30%;
+  width: 50%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 243, 255, 0.2), 
+    rgba(77, 255, 136, 0.2), 
+    transparent
+  );
   filter: blur(1px);
+}
+
+@keyframes footer-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .footer-swamp {
+    font-size: 0.75rem;
+    padding: 1.5rem 1rem;
+  }
 }

@@ -1,28 +1,91 @@
-/* Navbar.css - Flotante y Transparente */
+
 .container-navbar {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%; /* No toca los bordes, flota */
-  max-width: 1200px;
-  border-radius: 50px; /* Forma de cápsula */
-  background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(15px);
-  border: 0.5px solid rgba(188, 19, 254, 0.3) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease;
+  width: 92%; 
+  max-width: 1100px;
+  border-radius: 100px;
+  background: rgba(5, 15, 10, 0.4) !important;
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(0, 243, 255, 0.15) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efecto cuando el usuario hace scroll */
 .container-navbar:hover {
-  border-color: var(--neon-green) !important;
-  box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
-  transform: translateY(2px);
+  border-color: rgba(77, 255, 136, 0.4) !important;
+  box-shadow: 0 0 25px rgba(77, 255, 136, 0.1);
+  background: rgba(5, 20, 15, 0.6) !important;
+}
+
+.button-icon-astro {
+  background: transparent;
+  border: none;
+  color: var(--neon-blue);
+  padding: 5px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.3));
+}
+
+.button-icon-astro.playing i {
+  color: var(--neon-green);
+  animation: astro-pulse 2s infinite ease-in-out;
+}
+
+@keyframes astro-pulse {
+  0%, 100% { filter: drop-shadow(0 0 2px var(--neon-green)); opacity: 0.8; }
+  50% { filter: drop-shadow(0 0 15px var(--neon-green)); opacity: 1; transform: scale(1.1); }
 }
 
 .nav-link-custom {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 10px 15px;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link-custom:hover {
+  color: var(--neon-green) !important;
+  text-shadow: 0 0 8px rgba(77, 255, 136, 0.5);
+}
+
+.nav-link-custom.text-neon-green::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+}
+
+.burguer-button {
+  border: none !important;
+  padding: 0.5rem;
+}
+
+.burguer-button:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .container-navbar {
+    border-radius: 20px;
+    width: 95%;
+  }
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
 }
