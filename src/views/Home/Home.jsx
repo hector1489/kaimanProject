@@ -9,7 +9,7 @@ const Home = () => {
     <main className='home-container d-flex flex-column align-items-center'>
       <section className="home-hero d-flex flex-column align-items-center justify-content-center">
         <div className="home-content-wrapper text-center">
-          
+
           <div className="home-logo-container mb-4 animate-fade-in-up">
             <img
               className="home-avatar border-neon-blue"
@@ -26,18 +26,34 @@ const Home = () => {
             </div>
 
             <div className="animate-fade-in-up delay-2">
-              <h2 className="home-subtitle italic"> 
+              <h2 className="home-subtitle italic">
                 <i>Héctor González P</i><span className="text-neon-green">_</span>
               </h2>
             </div>
-            
-            <div className="mt-5 animate-fade-in-up delay-3">
-              <button 
+
+            <div className="mt-5 animate-fade-in-up delay-3 home-buttons-group">
+              <button
                 className="css-button-neon-green"
                 onClick={() => navigate('/projects')}
                 aria-label="Ir a la sección de proyectos"
               >
                 EXPLORAR PROYECTOS
+              </button>
+
+              <button
+                className="css-button-neon-blue"
+                onClick={() => window.open("https://r3ptar-store.xyz/", "_blank", "noopener,noreferrer")}
+                aria-label="Ir a R3ptar Store"
+              >
+                R3PTAR - STORE
+              </button>
+
+              <button
+                className="css-button-neon-green"
+                onClick={() => window.open("https://hector1489.github.io/ptn_rtr/", "_blank", "noopener,noreferrer")}
+                aria-label="Ir a Links in Bio"
+              >
+                LINKS IN BIO
               </button>
             </div>
           </div>
