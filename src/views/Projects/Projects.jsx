@@ -1,35 +1,43 @@
-import { GalleryProject, MainList } from "../../components/index.jsx"
-import './Projects.css'
+import { useContext } from "react";
+import DataContext from "../../context/Datacontext";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import './Projects.css';
 
 const Projects = () => {
+  const { data } = useContext(DataContext);
+  
+  const mainProjects = Array.isArray(data) ? data.slice(0, 14) : [];
+  const templates = Array.isArray(data) ? data.slice(14, 16) : [];
+
   return (
-    <div className="ProjectsView-container">
-
-      <div className="container-projects p-4">
-
-        <h2 className="f-bold text-white text-center text-uppercase">
-          Proyectos
+    <div className="ProjectsView-container container">
+      <section className="mt-5 animated-text">
+        <h2 className="title-glass border-neon-purple text-center text-uppercase mb-5">
+          Proyectos <span className="text-neon-purple">Portafolio</span>
         </h2>
-
-        <div className="d-flex flex-wrap justify-content-around p-4 animated-text-dos">
-          <GalleryProject />
+        <div className="projects-grid">
+          {mainProjects.map((item) => (
+            <div key={item.image} className="animated-text-dos">
+               <ProjectCard item={item} color="purple" />
+            </div>
+          ))}
         </div>
+      </section>
 
-      </div>
-
-      <div className="container-projects p-4">
-
-        <h3 className="f-bold text-white text-center">
-          Plantillas para la comunidad <span className="text-info">dev</span> <span className="text-warning fw-bold"> : </span>
+      <section className="mt-5 pt-5 animated-text-tres">
+        <h3 className="title-glass border-neon-green text-center mb-5">
+          Open Source <span className="text-neon-green">Templates</span>
         </h3>
-
-        <div className="d-flex flex-wrap justify-content-around p-4 animated-text-dos">
-          <MainList />
+        <div className="projects-grid pb-5">
+          {templates.map((item) => (
+            <div key={item.image}>
+              <ProjectCard item={item} color="green" />
+            </div>
+          ))}
         </div>
-
-      </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

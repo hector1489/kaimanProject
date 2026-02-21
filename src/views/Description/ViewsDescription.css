@@ -1,5 +1,17 @@
+
 .ViewsDescription-container {
   width: 100%;
-  margin-top: 50px;
-  padding: 20px;
-} 
+  min-height: 100vh;
+  margin-top: 50px; 
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .ViewsDescription-container {
+    gap: 40px;
+    padding: 20px 10px;
+  }
+}

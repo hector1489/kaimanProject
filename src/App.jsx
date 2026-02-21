@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Navbar } from './components/index.jsx'
+import { Navbar, Footer } from './components/index.jsx'
 import '../src/App.css'
 import { Home, NotFound, Projects, Contacts, Description } from './views/index.jsx'
 import DataContext from "./context/Datacontext"
@@ -29,6 +29,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Navbar />
+        <Footer />
       </BrowserRouter>
     </DataContext.Provider>
   )

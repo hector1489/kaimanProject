@@ -2,53 +2,50 @@ import './Intro.css';
 
 const Intro = () => {
   return (
-    <section className="section-intro">
-      <div className="d-flex flex-column justify-content-center gap-4">
-        <div className="section-intro-text text-center">
-          <div className="p-2">
-            <h1 className="fw-bold text-center">
-              Desarrollador web <span className="text-info">Full Stack</span>
-              <span className="text-warning">.</span>
-            </h1>
+    <section className="section-intro container">
+      <div className="row align-items-center justify-content-center w-100">
+        
+        <div className="col-12 col-lg-6 d-flex flex-column gap-4 animated-text-dos mb-5 mb-lg-0">
+          <div className="section-intro-text text-center text-lg-start border-neon-blue">
+            <div className="p-2">
+              <h1 className="fw-bold main-title">
+                Desarrollador Web <span className="text-neon-green">Full Stack</span>
+              </h1>
+            </div>
+            <div className="p-2">
+              <h3 className="name-subtitle italic">
+                <i>Héctor González P</i><span className="text-neon-blue">_</span>
+              </h3>
+            </div>
           </div>
 
-          <div className="p-2">
-            <h3>
-              <i>Héctor González P</i>
-              <span className="text-warning">.</span>
-            </h3>
-          </div>
-        </div>
-
-         <div className="d-flex flex-column flex-md-row mt-3">
-          <div className="container-project-home text-center p-2">
-            <p className="text-white">
-              <span className="text-warning fw-bold">¡Hola!</span> Soy <span className="text-info fw-bold">Héctor González</span>, un desarrollador web Full Stack apasionado por construir soluciones digitales completas.
+          <div className="container-intro-bio text-center text-lg-start p-4 border-neon-green">
+            <p className="text-white m-0">
+              <span className="text-neon-blue fw-bold">¡Hola!</span> Soy <span className="text-neon-green fw-bold">Héctor González</span>, apasionado por construir soluciones digitales completas.
             </p>
             <p className="text-white mt-3">
-              Actualmente, impulso el desarrollo web en{' '}
-              <a 
-                href="https://www.cocpcvi.cl/" 
-                target="_blank" 
+              Impulso el desarrollo en <a
+                href="https://www.cocpcvi.cl/"
+                target="_blank"
                 rel="noopener noreferrer"
+                className="neon-link-green"
               >
-                C.O.C. cvi.
-              </a>
-              , combinando esta labor con proyectos freelance y mi rol como director y desarrollador en la Agrupación Amigos del Puangue.
-            </p>
-            <p className="text-white mt-3">
-              Mi enfoque es transformar ideas en aplicaciones funcionales y escalables.
+                C.O.C. cvi
+              </a> y lidero proyectos freelance con enfoque funcional y escalable.
             </p>
           </div>
         </div>
-      </div>
 
-      <div className="d-flex justify-content-center align-items-center">
-        <img
-          className="rounded-image"
-          src="https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/foto2.jpg"
-          alt="Retrato de Héctor González"
-        />
+        <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center animated-text-tres">
+          <div className="image-container-neon">
+            <img
+              className="rounded-image-fixed"
+              src="https://raw.githubusercontent.com/hector1489/kaimanProject/main/src/assets/img/foto2.jpg"
+              alt="Héctor González"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
