@@ -24,7 +24,7 @@ const ProjectCard = ({ item, color = "purple" }) => {
           rel="noopener noreferrer"
           className={`${buttonClass} text-decoration-none d-flex align-items-center justify-content-center`}
         >
-          <i className="fab fa-github me-2"></i> GitHub
+          <i className="fa fa-up-right-from-square"></i>
         </Link>
       </Card.Body>
     </Card>
